@@ -19,8 +19,17 @@ const theme = extendTheme({
         }
     },
     colors: {
-        over: {
-            100: '#d9d9d9'
+        green: {
+            main: '#43ec34'
+        },
+        blue: {
+            main: '#133491'
+        },
+        purple: {
+            main: '#4411a1'
+        }, 
+        yellow: {
+            main: '#eae41c'
         }
     }
 })
