@@ -37,7 +37,7 @@ export const PartnerModal = ({ onOpen, isOpen, onClose }) => {
             color={'blue.main'}
             fontWeight={'bold'}
           >
-            ELF.NEXT.DOOR coworking space with childcare
+            ELF&ldquo;NEXT&ldquo;DOOR coworking space with childcare
           </ModalHeader>
           <ModalCloseButton />
           <ModalBody>
@@ -57,7 +57,7 @@ export const PartnerModal = ({ onOpen, isOpen, onClose }) => {
                 />
                 <Center>
                   <Image
-                    src="assets/img/elf-next-door.jpg"
+                    src={'assets/img/elf-next-door.jpg'}
                     pos={'absolute'}
                     top={'50%'}
                     transform={'translateY(-50%)'}
@@ -92,15 +92,16 @@ export const PartnerModal = ({ onOpen, isOpen, onClose }) => {
                           2020-2021 сурагчдын хийсэн онцлох үйл ажиллагаа:
                         </Td>
                         <Td>
-                          ЭЛФ Цэцэрлэгийн "Life Tree" хөтөлбөрийн 4 модулийг
-                          амжилттай хэрэгжүүлсэн
+                          ЭЛФ Цэцэрлэгийн &quot; Life Tree &quot; хөтөлбөрийн 4
+                          модулийг амжилттай хэрэгжүүлсэн
                         </Td>
                       </Tr>
                       <Tr>
                         <Td>Байршил:</Td>
                         <Td>
-                          Монгол улс, Улаанбаатар хот, Баянзүрх дүүрэг, 25-р
-                          хороо, 13-р хороолол-2, Нарны зам гудамж, 165 тоот
+                          Монгол улс&rdquo; Улаанбаатар хот&rdquo; Баянзүрх
+                          дүүрэг&rdquo; 25-р хороо&rdquo; 13-р хороолол-2&rdquo;
+                          Нарны зам гудамж&rdquo; 165 тоот
                         </Td>
                       </Tr>
                     </Tbody>
