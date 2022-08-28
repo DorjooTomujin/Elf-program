@@ -32,7 +32,8 @@ export default function Home() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <VStack>
-      <MainTitle />
+      <MainTitle /> 
+      <Box h={10}/>
       <Box maxW={"1200px"} py={10} w={"100%"}>
         <Tabs isFitted variant="enclosed">
           <TabList>
@@ -63,8 +64,9 @@ export default function Home() {
         <PartnerModal isOpen={isOpen} onOpen={onOpen} onClose={onClose} />
         <PartnerModal isOpen={isOpen} onOpen={onOpen} onClose={onClose} />
       </HStack>
+      <Box h={10}/>
       <VStack maxW={"1360px"} px={"80px"} py={10} gap={10} alignItems="start">
-        <HStack alignItems={"start"} gap={10}>
+        <HStack alignItems={"start"} gap={10} p={10}>
           <PrimaryTitle />
           <Box flex={1}>
             <Title />
@@ -91,15 +93,16 @@ export default function Home() {
 
         </Flex>
       </VStack>
-      <Box w={"1360px"}>
+      <Box w={"1360px"}  py={10}>
         <BasicTitle />
         <HStack
-          maxW={"1200px"}
+          maxW={"1360px"}
           px={"80px"}
           py={10}
           justifyContent={"space-between"}
+          gap={10}
         >
-          <Box>
+          <Box flex={1}>
             <Heading>basic</Heading>
             <Text>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
@@ -107,7 +110,7 @@ export default function Home() {
               molestias consequuntur deleniti?
             </Text>
           </Box>
-          <Box>
+          <Box flex={1}>
             <Heading>basic</Heading>
             <Text>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
@@ -126,10 +129,10 @@ export default function Home() {
         alignItems="start"
         mr={"80px"}
       >
-        <Box flex={1}>
+        <Box w={'calc(50% + 80px)'}>
           <PowerTitle />
         </Box>
-        <Box flex={1}>
+        <Box w={'50%'}>
           <PowerAccordian />
         </Box>
       </HStack>

@@ -98,12 +98,12 @@ export const BasicTitle = () => {
 
 export const PowerTitle = () => {
   return (
-    <Container px={0} mx={0} w={'100%'} alignItems="start">
+    <Container px={0} mx={0} w={'100%'} alignItems="start" maxW={'auto'}>
       <Flex w={'100%'} alignItems="start">
         <Box transform={'rotate(-90deg)'} color={'green.main'} fontSize={60}>
           <TriangleDownIcon />
         </Box>
-        <VStack alignItems={'start'} px={'20px'}>
+        <VStack alignItems={'start'} px={'20px'} w={'100%'} pr={0}>
           <HStack>
             <Heading>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
