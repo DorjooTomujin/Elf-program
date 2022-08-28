@@ -46,7 +46,7 @@ export const MainTitle = () => {
 
 export const PrimaryTitle = () => {
   return (
-    <Box>
+    <Box flex={1}>
       <VStack color={''} justifyContent="start" alignItems={'start'}>
         <Heading fontSize={'100px'} textTransform="uppercase">
           Арван

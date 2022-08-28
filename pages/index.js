@@ -12,26 +12,28 @@ import {
   HStack,
   useDisclosure,
   Text,
-} from '@chakra-ui/react';
+  Center,
+} from "@chakra-ui/react";
 import {
   BasicTitle,
   MainTitle,
   PowerTitle,
   PrimaryTitle,
   Title,
-} from '../src/components/titles';
+} from "../src/components/titles";
 import {
   TrainingPanel,
   PartnerModal,
   PowerAccordian,
-} from '../src/components/utils/';
-import { TriangleDownIcon } from '@chakra-ui/icons';
+} from "../src/components/utils/";
+import { TriangleDownIcon } from "@chakra-ui/icons";
+import {HexagonCard, MainCard, MethodCard} from '../src/components/utils/card'
 export default function Home() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <VStack>
       <MainTitle />
-      <Box maxW={'1200px'} py={10} w={'100%'}>
+      <Box maxW={"1200px"} py={10} w={"100%"}>
         <Tabs isFitted variant="enclosed">
           <TabList>
             <Tab>2-6 нас</Tab>
@@ -55,53 +57,47 @@ export default function Home() {
           </TabPanels>
         </Tabs>
       </Box>
-      <HStack maxW={'1200px'} gap={10} py={10}>
+      <HStack maxW={"1200px"} gap={10} py={10}>
         <PartnerModal isOpen={isOpen} onOpen={onOpen} onClose={onClose} />
         <PartnerModal isOpen={isOpen} onOpen={onOpen} onClose={onClose} />
         <PartnerModal isOpen={isOpen} onOpen={onOpen} onClose={onClose} />
         <PartnerModal isOpen={isOpen} onOpen={onOpen} onClose={onClose} />
       </HStack>
-      <VStack maxW={'1200px'} py={10} gap={10} alignItems="start">
-        <HStack alignItems={'start'} gap={10}>
+      <VStack maxW={"1360px"} px={"80px"} py={10} gap={10} alignItems="start">
+        <HStack alignItems={"start"} gap={10}>
           <PrimaryTitle />
-          <Box>
+          <Box flex={1}>
             <Title />
           </Box>
         </HStack>
-        <Flex>
-          <VStack w={'10%'}>
-            <Box>
-              <TriangleDownIcon />
-              <Text>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consequuntur, deleniti.
-              </Text>
-            </Box>
-            <Box>
-              <TriangleDownIcon />
-              <Text>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consequuntur, deleniti.
-              </Text>
-            </Box>
-            <Box>
-              <TriangleDownIcon />
-              <Text>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consequuntur, deleniti.
-              </Text>
-            </Box>
+        <Flex w={"100%"} gap={10}>
+          <VStack w={'25%'}>
+            <MainCard/>
+            <Box h={4}/>
+            <MainCard/>
+            <Box h={4}/>
+            <MainCard/>
           </VStack>
-          <Box></Box>
+          <Box w={'50%'}>
+            <HexagonCard/>
+          </Box>
+          <VStack w={'25%'}>
+          <MethodCard/>
+          <Box h={4}/>
+          <MethodCard/>
+          <Box h={4}/>
+          <MethodCard/>
+          </VStack>
+
         </Flex>
       </VStack>
-      <Box w={'1360px'}>
+      <Box w={"1360px"}>
         <BasicTitle />
         <HStack
-          maxW={'1200px'}
-          px={'80px'}
+          maxW={"1200px"}
+          px={"80px"}
           py={10}
-          justifyContent={'space-between'}
+          justifyContent={"space-between"}
         >
           <Box>
             <Heading>basic</Heading>
@@ -122,13 +118,13 @@ export default function Home() {
         </HStack>
       </Box>
       <HStack
-        maxW={'1360px'}
-        w={'100%'}
+        maxW={"1360px"}
+        w={"100%"}
         py={10}
         gap={10}
-        pr={'80px'}
+        pr={"80px"}
         alignItems="start"
-        mr={'80px'}
+        mr={"80px"}
       >
         <Box flex={1}>
           <PowerTitle />
