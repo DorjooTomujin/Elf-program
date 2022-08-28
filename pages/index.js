@@ -13,9 +13,11 @@ import {
   useDisclosure,
   Text,
   Center,
+  Image,
 } from "@chakra-ui/react";
 import {
   BasicTitle,
+  HomeTitle,
   MainTitle,
   PowerTitle,
   PrimaryTitle,
@@ -31,7 +33,11 @@ import {HexagonCard, MainCard, MethodCard} from '../src/components/utils/card'
 export default function Home() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
-    <VStack>
+    <VStack overflowX={'hidden'}>
+      <Box px={0}  w={'100vw'} h={'100vh'} pos={'relative'} overflow='hidden'  mb={10}>
+        <Image src={'https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'} pos={'absolute'} top={'50%'} transform={'translateY(-50%)'} w={'100vw'}/>
+        <HomeTitle/>
+      </Box>
       <MainTitle /> 
       <Box h={10}/>
       <Box maxW={"1200px"} py={10} w={"100%"}>

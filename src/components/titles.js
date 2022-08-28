@@ -10,6 +10,25 @@ import {
   Text,
   VStack,
 } from '@chakra-ui/react';
+export const HomeTitle = () => {
+  return (
+    <Container w={'100%'} maxW={'800px'} p={0} pos={'absolute'} bottom={'10%'} left={'5%'}>
+      <Flex alignItems={'center'} w={'100%'}>
+        <Box transform={'rotate(-90deg)'} color={'green.main'} fontSize={60}>
+          <TriangleDownIcon />
+        </Box>
+
+          <Heading textTransform={'uppercase'} color={'blue.main'} w={'80%'} whiteSpace='nowrap' ml={9}>
+            хүчирхэг хүн
+          </Heading>
+      </Flex>
+      <Text ml={24}>
+            өөрийнхөөрөө сэтгэл дүүрэн амьдрах потенциал хүн бүрт
+            байдаг.өөрийнхөөрөө сэтгэл дүүрэн амьдрах потенциал хүн бүрт байдаг.
+          </Text>
+    </Container>
+  )
+}
 
 export const MainTitle = () => {
   return (
