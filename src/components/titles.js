@@ -12,32 +12,56 @@ import {
 } from '@chakra-ui/react';
 export const HomeTitle = () => {
   return (
-    <Container w={'100%'} maxW={'800px'} p={0} pos={'absolute'} bottom={'10%'} left={'5%'}>
+    <Container
+      w={'100%'}
+      maxW={'800px'}
+      p={0}
+      mb={[6, 8, 10, 12, 16]}
+      ml={[0, 0, 0, 10, 16]}
+    >
       <Flex alignItems={'center'} w={'100%'}>
-        <Box transform={'rotate(-90deg)'} color={'green.main'} fontSize={60}>
+        <Box
+          transform={'rotate(-90deg)'}
+          color={'white'}
+          fontSize={[33, 33, 42, 45, 48, 60]}
+        >
           <TriangleDownIcon />
         </Box>
 
-          <Heading textTransform={'uppercase'} color={'blue.main'} w={'80%'} whiteSpace='nowrap' ml={9}>
-            хүчирхэг хүн
-          </Heading>
+        <Heading
+          textTransform={'uppercase'}
+          color={'white'}
+          w={'80%'}
+          whiteSpace="nowrap"
+          ml={'1.25rem'}
+        >
+          хүчирхэг хүн
+        </Heading>
       </Flex>
-      <Text ml={24}>
-            өөрийнхөөрөө сэтгэл дүүрэн амьдрах потенциал хүн бүрт
-            байдаг.өөрийнхөөрөө сэтгэл дүүрэн амьдрах потенциал хүн бүрт байдаг.
-          </Text>
+      <Text
+        ml={['4.5em', 16, 20, 20, '4.5em', '5em']}
+        color={'white'}
+        fontWeight="bold"
+      >
+        өөрийнхөөрөө сэтгэл дүүрэн амьдрах потенциал хүн бүрт
+        байдаг.өөрийнхөөрөө сэтгэл дүүрэн амьдрах потенциал хүн бүрт байдаг.
+      </Text>
     </Container>
-  )
-}
+  );
+};
 
 export const MainTitle = () => {
   return (
-    <Container w={'100%'} maxW={'1360px'} p={0}>
+    <Container w={'100%'} maxW={'1340px'} p={0}>
       <Flex alignItems={'start'} w={'100%'}>
-        <Box transform={'rotate(-90deg)'} color={'green.main'} fontSize={60}>
+        <Box
+          transform={'rotate(-90deg)'}
+          color={'green.main'}
+          fontSize={['33px', '33px', '42px', '45px', '48px', '60px']}
+        >
           <TriangleDownIcon />
         </Box>
-        <VStack textAlign={'start'} px={'20px'} alignItems="start">
+        <VStack textAlign={'start'} px={5} alignItems="start">
           <Heading textTransform={'uppercase'} color={'blue.main'} w={'80%'}>
             өөрийнхөөрөө сэтгэл дүүрэн амьдрах потенциал хүн бүрт байдаг.
           </Heading>
@@ -63,25 +87,102 @@ export const MainTitle = () => {
   );
 };
 
+export const ProgramTitle = () => {
+  return (
+    <Box w={'100%'}>
+      <Heading
+        px={'70px'}
+        fontSize={['16px', '16px', '17px', '18px', '20px', '24px']}
+        textTransform="uppercase"
+        color={'purple.main'}
+      >
+        Lorem, ipsum dolor.
+      </Heading>
+      <HStack w={'100%'} maxW={'1340px'}>
+        <Box
+          transform={'rotate(-90deg)'}
+          color={'purple.main'}
+          fontSize={['33px', '33px', '42px', '45px', '48px', '60px']}
+        >
+          <TriangleDownIcon />
+        </Box>
+        <Heading
+          px={'20px'}
+          fontSize={['31px', '31px', '35px', '37px', '40px', '50px']}
+          color={''}
+          textTransform="uppercase"
+        >
+          Lorem, ipsum dolor.
+        </Heading>
+      </HStack>
+    </Box>
+  );
+};
+export const AdvantageTitle = () => {
+  return (
+    <HStack w={'100%'} maxW={'1340px'}>
+      <Box
+        transform={'rotate(-90deg)'}
+        color={'purple.main'}
+        fontSize={[33, 33, 42, 45, 48, 60]}
+      >
+        <TriangleDownIcon />
+      </Box>
+      <VStack alignItems={'start'}>
+        <Heading
+          px={3}
+          fontSize={'3xl'}
+          fontWeight="normal"
+          color={''}
+          textTransform="uppercase"
+        >
+          Lorem, ipsum dolor.
+        </Heading>
+        <Heading
+          px={3}
+          fontSize={'3xl'}
+          color={''}
+          mt={0}
+          textTransform="uppercase"
+        >
+          Lorem, ipsum dolor.
+        </Heading>
+      </VStack>
+    </HStack>
+  );
+};
+
 export const PrimaryTitle = () => {
   return (
-    <Box flex={1}>
-      <VStack color={''} justifyContent="start" alignItems={'start'}>
-        <Heading fontSize={'100px'} textTransform="uppercase">
+    <Box flex={1} mb={4}>
+      <VStack color={''} justifyContent="start" alignItems={'start'} px={2}>
+        <Heading
+          fontSize={['65px', '18vw', '70px', '75px', '80px', '100px']}
+          textTransform="uppercase"
+        >
           Арван
         </Heading>
-        <Heading fontSize={'100px'} textTransform="uppercase">
+        <Heading
+          fontSize={['65px', '18vw', '70px', '75px', '80px', '100px']}
+          textTransform="uppercase"
+        >
           жилдээ
         </Heading>
-        <Heading fontSize={'100px'} textTransform="uppercase">
+        <Heading
+          fontSize={['65px', '18vw', '70px', '75px', '80px', '100px']}
+          textTransform="uppercase"
+        >
           амьдрал
         </Heading>
         <HStack gap={5}>
-          <Heading fontSize={'180px'} textTransform="uppercase">
+          <Heading
+            fontSize={['117px', '35vw', '150px', '150px', '142px', '180px']}
+            textTransform="uppercase"
+          >
             үз!
           </Heading>
 
-          <Text>
+          <Text fontSize={['16px', '16px', '12px', '16px', '16px', '16px']}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic autem
             aut officia adipisci officiis eligendi ex fuga repellendus
             doloremque possimus.
@@ -94,9 +195,13 @@ export const PrimaryTitle = () => {
 
 export const BasicTitle = () => {
   return (
-    <Container maxW={'1360px'} w={'100%'} px={0}>
+    <Container maxW={'1340px'} w={'100%'} px={0}>
       <Flex w={'100%'}>
-        <Box transform={'rotate(-90deg)'} color={'green.main'} fontSize={60}>
+        <Box
+          transform={'rotate(-90deg)'}
+          color={'green.main'}
+          fontSize={[33, 33, 42, 45, 48, 60]}
+        >
           <TriangleDownIcon />
         </Box>
         <VStack alignItems={'start'} px={'20px'}>
@@ -119,7 +224,11 @@ export const PowerTitle = () => {
   return (
     <Container px={0} mx={0} w={'100%'} alignItems="start" maxW={'auto'}>
       <Flex w={'100%'} alignItems="start">
-        <Box transform={'rotate(-90deg)'} color={'green.main'} fontSize={60}>
+        <Box
+          transform={'rotate(-90deg)'}
+          color={'green.main'}
+          fontSize={[33, 33, 42, 45, 48, 60]}
+        >
           <TriangleDownIcon />
         </Box>
         <VStack alignItems={'start'} px={'20px'} w={'100%'} pr={0}>
@@ -145,8 +254,8 @@ export const Title = () => {
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat,
         exercitationem?
       </Heading>
-      <HStack gap={10} alignItems="start">
-        <Box flex={1}>
+      <HStack gap={4} alignItems="start" flexDir={['column', 'column']}>
+        <Box flex={1} p={2}>
           <Image src="https://images.unsplash.com/photo-1661435805015-37e730f47f9c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" />
         </Box>
         <Box flex={1}>

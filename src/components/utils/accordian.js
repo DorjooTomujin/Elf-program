@@ -19,7 +19,7 @@ const spin1 = keyframes`
   `;
 export const PowerAccordian = () => {
   return (
-    <Accordion defaultIndex={[0]} allowMultiple>
+    <Accordion defaultIndex={[0]} allowMultiple px={3}>
       <AccordianItems />
       <AccordianItems />
       <AccordianItems />
@@ -42,13 +42,18 @@ export const AccordianItems = () => {
                 transform={isExpanded ? 'rotate(0deg)' : 'rotate(-90deg)'}
                 animation={isExpanded ? animation : animation1}
                 color={'green.main'}
-                fontSize={40}
+                fontSize={[26, 26, 28, 30, 32, 40]}
                 _active={{ transition: 1, rotate: '0deg' }}
               >
                 <TriangleDownIcon />
               </Box>
 
-              <Box flex="1" textAlign="left" ml={5} fontSize={'30px'}>
+              <Box
+                flex="1"
+                textAlign="left"
+                ml={5}
+                fontSize={[20, 20, 21, 22, 24, 30]}
+              >
                 Lorem ipsum dolor sit amet.
               </Box>
             </AccordionButton>
@@ -61,6 +66,38 @@ export const AccordianItems = () => {
           </AccordionPanel>
         </>
       )}
+    </AccordionItem>
+  );
+};
+
+export const AdvantageAccordian = () => {
+  return (
+    <Accordion defaultIndex={[0]} allowMultiple>
+      <AdvantageAccordianItems />
+      <AdvantageAccordianItems />
+      <AdvantageAccordianItems />
+    </Accordion>
+  );
+};
+
+export const AdvantageAccordianItems = () => {
+  return (
+    <AccordionItem>
+      <>
+        <h2>
+          <AccordionButton>
+            <Box flex="1" textAlign="left" fontSize={'30px'}>
+              Lorem ipsum dolor sit amet.
+            </Box>
+          </AccordionButton>
+        </h2>
+        <AccordionPanel pb={4} color="black">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </AccordionPanel>
+      </>
     </AccordionItem>
   );
 };

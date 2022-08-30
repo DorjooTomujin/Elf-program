@@ -1,0 +1,43 @@
+html {
+    font-size: 16px;
+}
+  /* sm: '320px',
+  md: '768px',
+  lg: '960px',
+  xl: '1200px',
+  '2xl': '1536px', */
+@media only screen and (max-width: 1200px) {
+    html {
+        font-size: 80%;
+    }
+}
+@media only screen and (max-width: 960px) {
+    html {
+        font-size: 75%;
+    }
+}
+@media only screen and (max-width: 768px) {
+    html {
+        font-size: 70%;
+    }
+}
+@media only screen and (max-width: 320px) {
+    html {
+        font-size: 65%;
+    }
+}
+
+
+.splide__pagination__page  {
+    background: #43ec34 !important;
+}
+.splide__pagination__page.is-active  {
+    background: #133491 !important;
+}
+.splide__arrow svg {
+    fill: #43ec34 ;
+}
+.splide__arrow:hover:not(:disabled) svg {
+    fill: #43ec34 ;
+}
+

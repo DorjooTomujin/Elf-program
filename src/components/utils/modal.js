@@ -24,7 +24,7 @@ import {
 
 export const PartnerModal = ({ onOpen, isOpen, onClose }) => {
   return (
-    <Box>
+    <Box px={0}>
       <Button variant={'unstyled'} onClick={onOpen}>
         <Image src="/assets/img/elf-next-door.jpg" />
       </Button>
