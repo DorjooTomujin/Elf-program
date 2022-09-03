@@ -1,4 +1,4 @@
-import { AddIcon, MinusIcon, TriangleDownIcon } from '@chakra-ui/icons';
+import { AddIcon, MinusIcon, TriangleDownIcon } from "@chakra-ui/icons";
 import {
   Accordion,
   AccordionButton,
@@ -6,9 +6,12 @@ import {
   AccordionItem,
   AccordionPanel,
   Box,
+  Heading,
   keyframes,
-} from '@chakra-ui/react';
-import { useState } from 'react';
+  Text,
+  VStack,
+} from "@chakra-ui/react";
+import { useState } from "react";
 const spin = keyframes`
     from {transform: rotate(-90deg);}
     to {transform: rotate(0deg)}
@@ -19,13 +22,20 @@ const spin1 = keyframes`
   `;
 export const PowerAccordian = () => {
   return (
-    <Accordion defaultIndex={[0]} allowMultiple px={3}>
-      <AccordianItems />
-      <AccordianItems />
-      <AccordianItems />
-      <AccordianItems />
-      <AccordianItems />
-    </Accordion>
+    <VStack flex={1}>
+      <Box px={4}>
+        <Heading color={"blue.main"} fontSize={24} textTransform='uppercase'>Lorem, ipsum dolor.</Heading>
+        <Box h={4}/>
+        <Text>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem explicabo similique eum dolorum reprehenderit consequuntur debitis cum facilis velit quae!</Text>
+      </Box>
+      <Accordion defaultIndex={[0]} allowMultiple w={'full'}>
+        <AccordianItems />
+        <AccordianItems />
+        <AccordianItems />
+        <AccordianItems />
+        <AccordianItems />
+      </Accordion>
+    </VStack>
   );
 };
 
@@ -33,32 +43,24 @@ export const AccordianItems = () => {
   const animation = `${spin} 0.3s linear`;
   const animation1 = `${spin1} 0.3s linear`;
   return (
-    <AccordionItem>
+    <AccordionItem border={'none'}>
       {({ isExpanded }) => (
         <>
           <h2>
             <AccordionButton>
-              <Box
-                transform={isExpanded ? 'rotate(0deg)' : 'rotate(-90deg)'}
-                animation={isExpanded ? animation : animation1}
-                color={'green.main'}
-                fontSize={[26, 26, 28, 30, 32, 40]}
-                _active={{ transition: 1, rotate: '0deg' }}
-              >
-                <TriangleDownIcon />
-              </Box>
-
+              <Box w={'20px'} h={'20px'} bg={'green.main'}/>
               <Box
                 flex="1"
                 textAlign="left"
                 ml={5}
-                fontSize={[20, 20, 21, 22, 24, 30]}
+                fontSize={[20]}
+                fontWeight={'600'}
               >
                 Lorem ipsum dolor sit amet.
               </Box>
             </AccordionButton>
           </h2>
-          <AccordionPanel pb={4} ml={16}>
+          <AccordionPanel pb={4} >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -86,7 +88,7 @@ export const AdvantageAccordianItems = () => {
       <>
         <h2>
           <AccordionButton>
-            <Box flex="1" textAlign="left" fontSize={'30px'}>
+            <Box flex="1" textAlign="left" fontSize={"30px"}>
               Lorem ipsum dolor sit amet.
             </Box>
           </AccordionButton>

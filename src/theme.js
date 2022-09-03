@@ -16,10 +16,10 @@ const theme = extendTheme({
   },
   colors: {
     green: {
-      main: '#43ec34',
+      main: '#a2cc39',
     },
     blue: {
-      main: '#133491',
+      main: '#184d9c',
     },
     purple: {
       main: '#4411a1',

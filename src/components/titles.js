@@ -10,36 +10,22 @@ import {
   Text,
   VStack,
 } from '@chakra-ui/react';
+import {BsTriangleFill} from 'react-icons/bs'
 export const HomeTitle = () => {
   return (
     <Container
       w={'100%'}
-      maxW={'800px'}
+      maxW={'auto'}
       p={0}
       mb={[6, 8, 10, 12, 16]}
       ml={[0, 0, 0, 10, 16]}
     >
-      <Flex alignItems={'center'} w={'100%'}>
-        <Box
-          transform={'rotate(-90deg)'}
-          color={'white'}
-          fontSize={[33, 33, 42, 45, 48, 60]}
-        >
-          <TriangleDownIcon />
-        </Box>
+      <Box>
+      <Image src='/assets/img/elf-curriculum-logo-white.png'/>
+    </Box>
 
-        <Heading
-          textTransform={'uppercase'}
-          color={'white'}
-          w={'80%'}
-          whiteSpace="nowrap"
-          ml={'1.25rem'}
-        >
-          хүчирхэг хүн
-        </Heading>
-      </Flex>
+      <Box h={10}/>
       <Text
-        ml={['4.5em', 16, 20, 20, '4.5em', '5em']}
         color={'white'}
         fontWeight="bold"
       >
@@ -154,39 +140,33 @@ export const AdvantageTitle = () => {
 
 export const PrimaryTitle = () => {
   return (
-    <Box flex={1} mb={4}>
-      <VStack color={''} justifyContent="start" alignItems={'start'} px={2}>
+    <Box flexGrow={2} mb={4}>
+      <VStack color={'white'} justifyContent="start" alignItems={'start'} px={2}>
         <Heading
-          fontSize={['65px', '18vw', '70px', '75px', '80px', '100px']}
+          fontSize={['65px', '18vw', '70px', '75px', '80px', '80px']}
           textTransform="uppercase"
         >
           Арван
         </Heading>
         <Heading
-          fontSize={['65px', '18vw', '70px', '75px', '80px', '100px']}
+          fontSize={['65px', '18vw', '70px', '75px', '80px', '80px']}
           textTransform="uppercase"
         >
           жилдээ
         </Heading>
         <Heading
-          fontSize={['65px', '18vw', '70px', '75px', '80px', '100px']}
+          fontSize={['65px', '18vw', '70px', '75px', '80px', '80px']}
           textTransform="uppercase"
         >
           амьдрал
         </Heading>
         <HStack gap={5}>
           <Heading
-            fontSize={['117px', '35vw', '150px', '150px', '142px', '180px']}
+            fontSize={['117px', '35vw', '150px', '150px', '142px', '150px']}
             textTransform="uppercase"
           >
             үз!
           </Heading>
-
-          <Text fontSize={['16px', '16px', '12px', '16px', '16px', '16px']}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic autem
-            aut officia adipisci officiis eligendi ex fuga repellendus
-            doloremque possimus.
-          </Text>
         </HStack>
       </VStack>
     </Box>
@@ -249,32 +229,33 @@ export const PowerTitle = () => {
 };
 export const Title = () => {
   return (
-    <VStack gap={4}>
-      <Heading fontSize={'30px'}>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat,
-        exercitationem?
-      </Heading>
-      <HStack gap={4} alignItems="start" flexDir={['column', 'column']}>
-        <Box flex={1} p={2}>
-          <Image src="https://images.unsplash.com/photo-1661435805015-37e730f47f9c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" />
-        </Box>
-        <Box flex={1}>
-          <Text>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio,
-            velit non. Doloremque suscipit omnis eaque, numquam molestias sunt
-            sint saepe nostrum atque reiciendis asperiores veniam nam corporis,
-            natus voluptatibus reprehenderit!
-          </Text>
-          <Box h={4} />
-          <Text>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
-            ratione hic quis, dolore reiciendis enim qui consequuntur suscipit
-            eos, quos perferendis mollitia voluptatum quisquam neque architecto!
-            Quidem consequuntur consequatur ipsam adipisci asperiores aperiam,
-            neque enim quod quasi harum non ipsum.
-          </Text>
-        </Box>
-      </HStack>
+    <VStack gap={4} alignItems={'start'} >
+      <HStack color={'white'} fontWeight={600} mb={5}><Text fontSize={'20px'} textTransform='uppercase'>
+        Lorem, ipsum.
+      </Text>
+      <Text fontSize={'20px'} color='green.main' textTransform='uppercase'>
+       Lorem, ipsum dolor.
+      </Text>
+      <Text fontSize={'20px'} textTransform='uppercase'>
+       :
+      </Text></HStack>
+      <VStack gap={10}>
+        <HStack alignItems={'start'}>
+        <Box bg={'green.main'} w={'40px'} h={'40px'}></Box>
+        <Box w={2}/>
+        <Text  color='white' fontSize={'20px'}>Lorem ipsum dolor sit amet.</Text>
+        </HStack>
+        <HStack alignItems={'start'}>
+        <Box bg={'green.main'} w={'40px'} h={'40px'}></Box>
+        <Box w={2}/>
+        <Text  color='white' fontSize={'20px'}>Lorem ipsum dolor sit amet.</Text>
+        </HStack>
+        <HStack alignItems={'start'}>
+        <Box bg={'green.main'} w={'40px'} h={'40px'}></Box>
+        <Box w={2}/>
+        <Text  color='white' fontSize={'20px'}>Lorem ipsum dolor sit amet.</Text>
+        </HStack>
+      </VStack>
     </VStack>
   );
 };

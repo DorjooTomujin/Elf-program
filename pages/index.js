@@ -14,7 +14,10 @@ import {
   Text,
   Center,
   Image,
-} from '@chakra-ui/react';
+  Grid,
+  GridItem,
+  Highlight,
+} from "@chakra-ui/react";
 import {
   BasicTitle,
   HomeTitle,
@@ -22,69 +25,76 @@ import {
   PowerTitle,
   PrimaryTitle,
   Title,
-} from '../src/components/titles';
+} from "../src/components/titles";
 import {
   TrainingPanel,
   PartnerModal,
   PowerAccordian,
-} from '../src/components/utils/';
+} from "../src/components/utils/";
 
 import {
+  BasicCard,
   HexagonCard,
   MainCard,
   MethodCard,
-} from '../src/components/utils/card';
-import { Splide, SplideSlide } from '@splidejs/react-splide';
-import { AchievementSplide, MediaSplide } from '../src/components/utils/splide';
+  ProgramCard,
+} from "../src/components/utils/card";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+
+import { AchievementSplide, MediaSplide } from "../src/components/utils/splide";
+
+import { useRouter } from "next/router";
+import { useState } from "react";
+
 export default function Home() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+
+  const router = useRouter();
+
   return (
-    <VStack overflowX={'hidden'}>
+    <VStack overflowX={"hidden"}>
       <Box
         px={0}
-        w={'100vw'}
-        h={['60vh', '100vw', '80vw', '50vw', '50vw']}
-        pos={'relative'}
+        w={"100vw"}
+        // h={['60vh', '100vw', '80vw', '50vw', '50vw']}
         overflow="hidden"
         mb={10}
-        bgImage="'https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'"
-        display={'flex'}
-        alignItems="end"
-        justifyContent={'start'}
-        bgSize="cover"
-        bgRepeat={'no-repeat'}
-        bgPos="center"
+        bg={"blue.main"}
+        display={"flex"}
+        alignItems="center"
+        justifyContent={"start"}
       >
-        <HomeTitle />
+        <Box w={"40%"}>
+          <HomeTitle />
+        </Box>
+        <Box w={"60%"}>
+          <Image src="/assets/img/Merit1.png" />
+        </Box>
       </Box>
       <MainTitle />
       <Box h={10} />
-      <Box maxW={'1200px'} py={10} w={'100%'} px={[5, 5, 5, 5, 0, 0]}>
-        <Tabs isFitted variant="enclosed">
-          <TabList>
-            <Tab>2-6 нас</Tab>
-            <Tab>6-11 нас</Tab>
-            <Tab>11-15 нас</Tab>
-            <Tab>15-18 нас</Tab>
-          </TabList>
-          <TabPanels>
-            <TabPanel>
-              <TrainingPanel />
-            </TabPanel>
-            <TabPanel>
-              <TrainingPanel />
-            </TabPanel>
-            <TabPanel>
-              <TrainingPanel />
-            </TabPanel>
-            <TabPanel>
-              <TrainingPanel />
-            </TabPanel>
-          </TabPanels>
-        </Tabs>
+      <Box maxW={"1200px"} py={10} w={"100%"} px={[5, 5, 5, 5, 0, 0]}>
+        <Text color={"blue.main"} textAlign="center">
+          Lorem ipsum dolor sit amet.
+        </Text>
+        <Box h={10} />
+        <Grid templateColumns={"repeat(4, 1fr)"} gap={10}>
+          <GridItem>
+            <ProgramCard />
+          </GridItem>
+          <GridItem>
+            <ProgramCard />
+          </GridItem>
+          <GridItem>
+            <ProgramCard />
+          </GridItem>
+          <GridItem>
+            <ProgramCard />
+          </GridItem>
+        </Grid>
       </Box>
       <HStack
-        maxW={'1200px'}
+        maxW={"1200px"}
         gap={[1.5, 1.5, 2, 4, 6, 8]}
         py={10}
         px={[5, 5, 5, 5, 0, 0]}
@@ -95,75 +105,108 @@ export default function Home() {
         <PartnerModal isOpen={isOpen} onOpen={onOpen} onClose={onClose} />
       </HStack>
       <Box h={10} />
-      <VStack
-        maxW={'1360px'}
-        px={['10px', '10px', '10px', '10px', '80px', '80px']}
-        pb={10}
-        gap={10}
-        alignItems="start"
+      <Box
+        w={"100%"}
+        py={100}
+        bg={"blue.main"}
+        justifyContent={"center"}
+        alignItems="center"
+        display="flex"
       >
-        <HStack
-          alignItems={'start'}
-          gap={10}
-          py={10}
-          flexDir={['column', 'column', 'row ', 'row', 'row', 'row']}
-        >
-          <PrimaryTitle />
-          <Box flex={1}>
-            <Title />
-          </Box>
-        </HStack>
-        <Flex
-          w={'100%'}
-          gap={10}
-          flexDir={['column', 'column', 'column', 'column', 'row', 'row']}
-        >
-          <VStack
-            w={['100%', '100%', '100%', '100%', '25%', '25%']}
-            flexDir={['column', 'column', 'row', 'row', 'column', 'column']}
-            gap={[2, 2, 4, 10, 0, 0]}
-          >
-            <MainCard />
-            <Box h={4} />
-            <MainCard />
-            <Box h={4} />
-            <MainCard />
-          </VStack>
+        <VStack maxW={"1200px"} w={"100%"} pb={10} gap={10} alignItems="start">
           <HStack
-            w={['100%', '100%', '100%', '100%', '75%', '75%']}
-            alignItems="start"
-            flexDir={['column', 'column', 'row', 'row', 'row', 'row']}
+            w={"100%"}
+            py={10}
+            flexDir={["column", "column", "row ", "row", "row", "row"]}
           >
-            <Box
-              w={['100%', '100%', '55%', '50%', '67%', '67%']}
-              pb={[8, 8, 0, 0, 0, 0]}
-            >
-              <HexagonCard />
+            <PrimaryTitle />
+            <Box flexGrow={3}>
+              <Title />
             </Box>
-            <VStack
-              w={['100%', '100%', '45%', '50%', '33%', '33%']}
-              flexDir={['row', 'row', 'column', 'column', 'column', 'column']}
-            >
-              <MethodCard />
-              <Box h={4} />
-              <MethodCard />
-              <Box h={4} />
-              <MethodCard />
-            </VStack>
           </HStack>
-        </Flex>
-      </VStack>
-      <Box maxW={'1360px'} py={10}>
-        <BasicTitle />
+        </VStack>
+      </Box>
+      {/* <Flex
+        w={"100%"}
+        gap={10}
+        flexDir={["column", "column", "column", "column", "row", "row"]}
+      >
+        <VStack
+          w={["100%", "100%", "100%", "100%", "25%", "25%"]}
+          flexDir={["column", "column", "row", "row", "column", "column"]}
+          gap={[2, 2, 4, 10, 0, 0]}
+        >
+          <MainCard />
+          <Box h={4} />
+          <MainCard />
+          <Box h={4} />
+          <MainCard />
+        </VStack>
         <HStack
-          maxW={'1360px'}
-          px={['10px', '52px', '10px', '10px', '80px', '80px']}
+          w={["100%", "100%", "100%", "100%", "75%", "75%"]}
+          alignItems="start"
+          flexDir={["column", "column", "row", "row", "row", "row"]}
+        >
+          <Box
+            w={["100%", "100%", "55%", "50%", "67%", "67%"]}
+            pb={[8, 8, 0, 0, 0, 0]}
+          >
+            <HexagonCard />
+          </Box>
+          <VStack
+            w={["100%", "100%", "45%", "50%", "33%", "33%"]}
+            flexDir={["row", "row", "column", "column", "column", "column"]}
+          >
+            <MethodCard />
+            <Box h={4} />
+            <MethodCard />
+            <Box h={4} />
+            <MethodCard />
+          </VStack>
+        </HStack>
+      </Flex> */}
+      <HStack w={'1200px'} py={100}>
+          <Box
+            // w={["100%", "100%", "55%", "50%", "67%", "67%"]}
+            // pb={[8, 8, 0, 0, 0, 0]}
+            flex={1}
+          >
+            <HexagonCard />
+          </Box>
+          <Box flex={1}><PowerAccordian /></Box>
+      </HStack>
+      <Box maxW={"1360px"} w={'100%'} py={10}>
+        <Box w={'100%'}><BasicTitle /></Box>
+        <Box h={10}/>
+        <HStack w={'100%'} maxW="1200px" mx='auto' gap={10}>
+          <VStack w={'100%'}  alignItems={'start'}>
+            <Heading color={'blue.main'} textTransform='uppercase'>Lorem.</Heading>
+            <Box h={4}/>
+            <BasicCard l='green'/>
+            <Box h={10}/>
+            <BasicCard/>
+          </VStack>
+          <VStack w={'100%'}  alignItems={'start'}>
+            <Heading color={'blue.main'} textTransform='uppercase'>Lorem.</Heading>
+            <Box h={4}/>
+            <BasicCard l='green'/>
+            <Box h={10}/>
+            <BasicCard/>
+          </VStack>
+
+        </HStack>
+        <Box h={10}/>
+        <HStack
+          maxW={"1200px"}
+          mx='auto'
+          
           py={10}
-          justifyContent={'space-between'}
+          justifyContent={"space-between"}
           gap={[2, 2, 8, 8, 10, 10]}
         >
           <Box flex={1}>
-            <Heading>basic</Heading>
+          <Heading fontSize={'40px'} textTransform='uppercase' color={'blue.main'}>basic</Heading>
+          <Box h={4}/>
             <Text>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
               odit cupiditate dicta voluptas nisi possimus mollitia officiis
@@ -171,7 +214,8 @@ export default function Home() {
             </Text>
           </Box>
           <Box flex={1}>
-            <Heading>basic</Heading>
+            <Heading fontSize={'40px'} textTransform='uppercase' color={'blue.main'}>basic</Heading>
+            <Box h={4}/>
             <Text>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
               odit cupiditate dicta voluptas nisi possimus mollitia officiis
@@ -180,65 +224,65 @@ export default function Home() {
           </Box>
         </HStack>
       </Box>
-      <HStack
-        maxW={'1340px'}
-        w={'100%'}
+      {/* <HStack
+        maxW={"1340px"}
+        w={"100%"}
         py={10}
         gap={10}
-        pr={['10px', '10px', '43px', '43px', '80px', '80px']}
+        pr={["10px", "10px", "43px", "43px", "80px", "80px"]}
         alignItems="start"
-        mr={['10px', '10px', '43px', '43px', '80px', '80px']}
-        flexDir={['column', 'column', 'row', 'row', 'row', 'row']}
+        mr={["10px", "10px", "43px", "43px", "80px", "80px"]}
+        flexDir={["column", "column", "row", "row", "row", "row"]}
       >
         <Box
           w={[
-            '100%',
-            '100%',
-            'calc(50% + 80px)',
-            'calc(50% + 80px)',
-            'calc(50% + 80px)',
-            'calc(50% + 80px)',
+            "100%",
+            "100%",
+            "calc(50% + 80px)",
+            "calc(50% + 80px)",
+            "calc(50% + 80px)",
+            "calc(50% + 80px)",
           ]}
         >
           <PowerTitle />
         </Box>
-        <Box w={['100%', '100%', '50%', '50%', '50%', '50%']}>
+        <Box w={["100%", "100%", "50%", "50%", "50%", "50%"]}>
           <PowerAccordian />
         </Box>
-      </HStack>
-      <Box maxW={'1360px'} px={'80px'} py={10}>
+      </HStack> */}
+      {/* <Box maxW={"1360px"} px={"80px"} py={10}>
         <Splide
           options={{
-            type: 'loop',
-            gap: '1rem',
+            type: "loop",
+            gap: "1rem",
             autoplay: true,
             perPage: 5,
             speed: 1500,
           }}
-          style={{ padding: '3rem 5rem' }}
+          style={{ padding: "3rem 5rem" }}
         >
           <AchievementSplide />
           <AchievementSplide />
           <AchievementSplide />
         </Splide>
       </Box>
-      <Box maxW={'1200px'} py={10}>
+      <Box maxW={"1200px"} py={10}>
         <Splide
           options={{
-            type: 'loop',
-            gap: '1rem',
+            type: "loop",
+            gap: "1rem",
             autoplay: true,
             perPage: 3,
             speed: 1500,
           }}
-          style={{ padding: '3rem 5rem', width: '100%' }}
+          style={{ padding: "3rem 5rem", width: "100%" }}
         >
           <MediaSplide />
           <MediaSplide />
           <MediaSplide />
           <MediaSplide />
         </Splide>
-      </Box>
+      </Box> */}
     </VStack>
   );
 }
