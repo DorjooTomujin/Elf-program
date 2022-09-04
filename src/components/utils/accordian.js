@@ -28,7 +28,7 @@ export const PowerAccordian = () => {
         <Box h={4}/>
         <Text>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem explicabo similique eum dolorum reprehenderit consequuntur debitis cum facilis velit quae!</Text>
       </Box>
-      <Accordion defaultIndex={[0]} allowMultiple w={'full'}>
+      <Accordion defaultIndex={[0]} allowMultiple w={'100%'}>
         <AccordianItems />
         <AccordianItems />
         <AccordianItems />
@@ -43,7 +43,7 @@ export const AccordianItems = () => {
   const animation = `${spin} 0.3s linear`;
   const animation1 = `${spin1} 0.3s linear`;
   return (
-    <AccordionItem border={'none'}>
+    <AccordionItem border={'none'} w={'full'}>
       {({ isExpanded }) => (
         <>
           <h2>
@@ -60,7 +60,7 @@ export const AccordianItems = () => {
               </Box>
             </AccordionButton>
           </h2>
-          <AccordionPanel pb={4} >
+          <AccordionPanel pb={4} w={'auto'} maxW={['300px','750px', '750px', '900px', '1200px', '1500px']}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut

@@ -67,8 +67,8 @@ export const HexagonCard = () => {
         <Center>
           <Text
             pos={"absolute"}
-            top={"-12%"}
-            fontSize={["0.75em", "0.75em", "0.75em", "1em", "1em", "1me"]}
+            top={"calc(-12% - 10px)"}
+            fontSize={["1.3em", "1.3em", "1em", "1em", "1em", "1me"]}
           >
             Lorem, ipsum dolor.
           </Text>
@@ -87,8 +87,8 @@ export const HexagonCard = () => {
         <Center>
           <Text
             pos={"absolute"}
-            top={"-12%"}
-            fontSize={["0.75em", "0.75em", "0.75em", "1em", "1em", "1me"]}
+            top={"calc(-12% - 10px)"}
+            fontSize={["1.3em", "1.3em", "1em", "1em", "1em", "1me"]}
           >
             Lorem, ipsum dolor.
           </Text>
@@ -105,7 +105,7 @@ export const HexagonCard = () => {
         left={"17%"}
       >
         <Center>
-          <Text fontSize={["0.75em", "0.75em", "0.75em", "1em", "1em", "1me"]}>
+          <Text mt={[4,4,0,0,0,0]} fontSize={["1.3em", "1.3em", "1em", "1em", "1em", "1me"]}>
             Lorem, ipsum dolor.
           </Text>
         </Center>
@@ -118,11 +118,11 @@ export const HexagonCard = () => {
         height={0}
         pt={"40%"}
         left={"50%"}
-        fontSize={["0.75em", "0.75em", "0.75em", "1em", "1em", "1me"]}
+        fontSize={["1.3em", "1.3em", "1em", "1em", "1em", "1me"]}
         transform={"translateX(-50%)"}
       >
         <Center>
-          <Text>Lorem, ipsum dolor.</Text>
+          <Text mt={[4,4,0,0,0,0]}>Lorem, ipsum dolor.</Text>
         </Center>
       </Box>
       <Box
@@ -138,8 +138,8 @@ export const HexagonCard = () => {
         <Center>
           <Text
             pos={"absolute"}
-            top={"-12%"}
-            fontSize={["0.75em", "0.75em", "0.75em", "1em", "1em", "1me"]}
+            top={"calc(-12% - 10px)"}
+            fontSize={["1.3em", "1.3em", "1em", "1em", "1em", "1me"]}
           >
             Lorem, ipsum dolor.
           </Text>
@@ -156,7 +156,7 @@ export const HexagonCard = () => {
         right={"17%"}
       >
         <Center>
-          <Text fontSize={["0.75em", "0.75em", "0.75em", "1em", "1em", "1me"]}>
+          <Text mt={[4,4,0,0,0,0]} fontSize={["1.3em", "1.3em", "1em", "1em", "1em", "1me"]}>
             Lorem, ipsum dolor.
           </Text>
         </Center>
@@ -189,41 +189,62 @@ export const HexagonCard = () => {
         h={0}
         pt={"38.5%"}
         bg={"white"}
+        transform={'rotate(90deg)'}
       >
         <Center>
-          <Text fontSize={["0.75em", "0.75em", "0.75em", "1em", "1em", "1me"]}>
+          <Text
+            pos={"absolute"}
+            top={[-10, -10, -6, -6, -6, -6]}
+            fontSize={["1.1em", "1.1em", "1em", "1em", "1em", "1me"]}
+          >
+            Lorem, ipsum dolor.
+          </Text>
+        </Center>
+      </Box>
+      <Box
+        pos={"absolute"}
+        w={"38.5%"}
+        top={"26.5%"}
+        left={"31%"}
+        h={0}
+        pt={"38.5%"}
+        bg={"white"}
+        transform={'rotate(-90deg)'}
+      >
+        <Center>
+          <Text
+            pos={"absolute"}
+            top={[-10, -10, -6, -6, -6, -6]}
+            fontSize={["1.1em", "1.1em", "1em", "1em", "1em", "1me"]}
+          >
+            Lorem, ipsum dolor.
+          </Text>
+        </Center>
+      </Box>
+      <Box
+        pos={"absolute"}
+        w={"38.5%"}
+        top={"26.5%"}
+        left={"31%"}
+        h={0}
+        pt={"38.5%"}
+        bg={"white"}
+      >
+        <Center>
+          <Text fontSize={["1em", "1.1em", "1em", "1em", "1em", "1me"]}>
             Lorem, ipsum dolor.
           </Text>
         </Center>
         <Center>
           <Text
             pos={"absolute"}
-            top={-6}
-            fontSize={["0.75em", "0.75em", "0.75em", "1em", "1em", "1me"]}
+            top={[-10, -10, -6, -6, -6, -6]}
+            fontSize={["1.1em", "1.1em", "1em", "1em", "1em", "1me"]}
           >
             Lorem, ipsum dolor.
           </Text>
         </Center>
-        <Text
-          pos={"absolute"}
-          transform="translateY(-50%) rotate(90deg) "
-          whiteSpace={"nowrap"}
-          fontSize={["0.75em", "0.75em", "0.75em", "1em", "1em", "1me"]}
-          left={["66%", "66%", "66%", "73%", "73%", "73%"]}
-          top={"50%"}
-        >
-          Lorem, ipsum dolor.
-        </Text>
-        <Text
-          pos={"absolute"}
-          transform="translateY(-50%) rotate(-90deg) "
-          whiteSpace={"nowrap"}
-          fontSize={["0.75em", "0.75em", "0.75em", "1em", "1em", "1me"]}
-          right={["66%", "66%", "66%", "73%", "73%", "73%"]}
-          top={"50%"}
-        >
-          Lorem, ipsum dolor.
-        </Text>
+       
         <Box pos={"absolute"} top={0} w={"100%"}>
           <Image src="/assets/img/logo.png" />
         </Box>
@@ -280,7 +301,7 @@ export const BasicCard = ({ l }) => {
         color={"white"}
         fontWeight={"bold"}
         textTransform="uppercase"
-        fontSize={"40px"}
+        fontSize={[24, 24, 36, 36, 48, 48]}
         whiteSpace="nowrap"
         pos={"absolute"}
       >

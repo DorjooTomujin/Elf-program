@@ -63,11 +63,12 @@ export default function Home() {
         display={"flex"}
         alignItems="center"
         justifyContent={"start"}
+        flexDir={['column-reverse', 'column-reverse', 'row', 'row', 'row', 'row']}
       >
-        <Box w={"40%"}>
+        <Box w={['90%', '90%', '40%', '40%', '40%', '40%']} pl={[0,0,8,0,0,0]}>
           <HomeTitle />
         </Box>
-        <Box w={"60%"}>
+        <Box w={['100%', '80vw', '60%', '60%', '60%', '60%']} mb={['-15vw', '-15vw', 0, 0, 0, 0]}>
           <Image src="/assets/img/Merit1.png" />
         </Box>
       </Box>
@@ -95,14 +96,21 @@ export default function Home() {
       </Box>
       <HStack
         maxW={"1200px"}
-        gap={[1.5, 1.5, 2, 4, 6, 8]}
+        gap={[4,4,4, 4, 6, 8]}
         py={10}
-        px={[5, 5, 5, 5, 0, 0]}
+        px={[10, 10, 10, 10, 0, 0]}
+        flexDir={['column', 'column', 'row', 'row', 'row', 'row']}
       >
-        <PartnerModal isOpen={isOpen} onOpen={onOpen} onClose={onClose} />
-        <PartnerModal isOpen={isOpen} onOpen={onOpen} onClose={onClose} />
-        <PartnerModal isOpen={isOpen} onOpen={onOpen} onClose={onClose} />
-        <PartnerModal isOpen={isOpen} onOpen={onOpen} onClose={onClose} />
+        <HStack gap={[8,8,6,6, 6, 8]}>
+
+        <PartnerModal isOpen={isOpen} onOpen={onOpen} onClose={onClose} imgsrc={'elf-next-door'}/>
+        <PartnerModal isOpen={isOpen} onOpen={onOpen} onClose={onClose} imgsrc={'eco-kindergarden'}/>
+        </HStack>
+        <HStack gap={[8,8,6,6, 6, 8]}>
+          
+        <PartnerModal isOpen={isOpen} onOpen={onOpen} onClose={onClose} imgsrc={'human-school'}/>
+        <PartnerModal isOpen={isOpen} onOpen={onOpen} onClose={onClose} imgsrc='tas' />
+        </HStack>
       </HStack>
       <Box h={10} />
       <Box
@@ -165,10 +173,10 @@ export default function Home() {
           </VStack>
         </HStack>
       </Flex> */}
-      <HStack w={'1200px'} py={100}>
+      <HStack maxW={'1200px'} py={100} flexDir={['column-reverse', 'column-reverse', 'row', 'row', 'row', 'row']}>
           <Box
-            // w={["100%", "100%", "55%", "50%", "67%", "67%"]}
-            // pb={[8, 8, 0, 0, 0, 0]}
+            w={["100%", "100%", "55%", "50%", "67%", "67%"]}
+            pt={[10, 10, 0, 0, 0, 0]}
             flex={1}
           >
             <HexagonCard />
@@ -178,19 +186,19 @@ export default function Home() {
       <Box maxW={"1360px"} w={'100%'} py={10}>
         <Box w={'100%'}><BasicTitle /></Box>
         <Box h={10}/>
-        <HStack w={'100%'} maxW="1200px" mx='auto' gap={10}>
+        <HStack w={'100%'} maxW="1200px" mx='auto' gap={[4,4,6,6,8,10]} px={[5,5,5,5,0,0]}>
           <VStack w={'100%'}  alignItems={'start'}>
             <Heading color={'blue.main'} textTransform='uppercase'>Lorem.</Heading>
             <Box h={4}/>
             <BasicCard l='green'/>
-            <Box h={10}/>
+            <Box h={[4,4,6,6,8,10]}/>
             <BasicCard/>
           </VStack>
           <VStack w={'100%'}  alignItems={'start'}>
             <Heading color={'blue.main'} textTransform='uppercase'>Lorem.</Heading>
             <Box h={4}/>
             <BasicCard l='green'/>
-            <Box h={10}/>
+            <Box h={[4,4,6,6,8,10]}/>
             <BasicCard/>
           </VStack>
 
@@ -250,7 +258,7 @@ export default function Home() {
           <PowerAccordian />
         </Box>
       </HStack> */}
-      {/* <Box maxW={"1360px"} px={"80px"} py={10}>
+      <Box maxW={"1360px"} px={"80px"} py={10}>
         <Splide
           options={{
             type: "loop",
@@ -282,7 +290,7 @@ export default function Home() {
           <MediaSplide />
           <MediaSplide />
         </Splide>
-      </Box> */}
+      </Box>
     </VStack>
   );
 }
