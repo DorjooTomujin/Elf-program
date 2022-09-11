@@ -175,7 +175,7 @@ export const PrimaryTitle = () => {
 
 export const BasicTitle = () => {
   return (
-    <Container maxW={'1340px'} w={'100%'} px={0}>
+    <Container maxW={'1340px'} w={'100%'} px={[4,4,4,0,0, 0]}>
       <Flex w={'100%'}>
         <Box
           transform={'rotate(-90deg)'}

@@ -6,12 +6,38 @@ import "@splidejs/react-splide/css/skyblue";
 import "@splidejs/react-splide/css/sea-green";
 import "@splidejs/react-splide/css/core";
 import "../src/styles/style.css";
-import { appWithTranslation } from "next-i18next";
+import i18next from "i18next";
+import { useEffect } from "react";
+
 
 
 function MyApp({ Component, pageProps }) {
 
+  useEffect( () => {
 
+    const test = async () => {
+     i18next.init({
+       lng:'mn',
+       debug: true,
+       resources: {
+         mn: {
+           translation: {
+             "key": "hello"
+           }
+         },
+         en: {
+           translation: {
+             "key": "world"
+           }
+         },
+       }
+     })
+    }
+    test().catch(console.error)
+
+  
+
+ },[])
   return (
     <ChakraProvider resetCSS theme={theme}>
       <Layout>
@@ -22,4 +48,4 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-export default appWithTranslation(MyApp);
+export default MyApp;

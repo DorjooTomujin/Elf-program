@@ -1,21 +1,21 @@
+import { Button } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
+import i18next from "i18next";
 export default function Navbar({lng, setLng}) {
   const router = useRouter()
-    
+  const changeLng = () => {
+    i18next.changeLanguage('mn', (err, t) => {
+      if(err) return console.log(err)
+      t('key')
+    })
+  }
     return (
         <div
-              onClick={() => {
-
-                lng == 'mn' ? router.replace(router.pathname, router.pathname, {
-                  locale: 'en',
-                }) : router.replace(router.pathname, router.pathname, {
-                  locale: 'mn',
-                })
-              }}
+            onClick={() => changeLng()}
               
             >
-              <p>{lng == '' ? 'mn' : 'en'}</p>
+              <Button>asdf</Button>
             </div>
     )
 }
