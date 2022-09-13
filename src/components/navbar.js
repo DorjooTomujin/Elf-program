@@ -15,7 +15,7 @@ export default function Navbar({lng, setLng}) {
             onClick={() => changeLng()}
               
             >
-              <Button>asdf</Button>
+              <Button></Button>
             </div>
     )
 }
