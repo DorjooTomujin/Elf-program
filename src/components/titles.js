@@ -259,3 +259,19 @@ export const Title = () => {
     </VStack>
   );
 };
+
+export const MediaTitle = ({title}) => {
+  return (
+    <Heading fontSize={'24px'} my={5} color='blue.main' textTransform={'uppercase'} textAlign='start'>
+      {title}
+    </Heading>
+  )
+}
+
+export const ColorTitle = ({color, title}) => {
+  return (
+    <Heading fontSize={'70px'} whiteSpace='nowrap' lineHeight={1} color={color} textTransform={'uppercase'} textAlign='start'>
+      {title}
+    </Heading>
+  )
+}

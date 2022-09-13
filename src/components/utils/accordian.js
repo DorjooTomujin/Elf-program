@@ -39,7 +39,7 @@ export const PowerAccordian = () => {
   );
 };
 
-export const AccordianItems = () => {
+export const AccordianItems = ({title, text, text1, color}) => {
   const animation = `${spin} 0.3s linear`;
   const animation1 = `${spin1} 0.3s linear`;
   return (
@@ -47,24 +47,24 @@ export const AccordianItems = () => {
       {({ isExpanded }) => (
         <>
           <h2>
-            <AccordionButton>
-              <Box w={'20px'} h={'20px'} bg={'green.main'}/>
+            <AccordionButton w={'full'} >
+              <Box w={'20px'} h={'20px'} bg={'green.main'} />
               <Box
                 flex="1"
                 textAlign="left"
                 ml={5}
                 fontSize={[20]}
                 fontWeight={'600'}
+                color={color}
               >
-                Lorem ipsum dolor sit amet.
+                {title == undefined ? 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor cumque dol' : title}
               </Box>
             </AccordionButton>
           </h2>
-          <AccordionPanel pb={4} w={'auto'} maxW={['300px','750px', '750px', '900px', '1200px', '1500px']}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+          <AccordionPanel color={color} pb={4} w={'auto'} maxW={['300px','750px', '750px', '900px', '1200px', '1500px']}>
+            <Text w='full'>{text == undefined && ('Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor cumque dolorum error reprehenderit consectetur numquam esse soluta possimus, asperiores nobis ipsa odit distinctio assumenda libero eligendi fuga aspernatur amet quidem repellat fugit quam quod laudantium excepturi molestiae. Ex, non ut corrupti aperiam fuga ipsam explicabo eos placeat inventore quis eius.')}{text}</Text>
+            <br/>
+            <Text>{text1 != '' || text1 != undefined && ''}{text1}</Text>
           </AccordionPanel>
         </>
       )}
@@ -103,3 +103,16 @@ export const AdvantageAccordianItems = () => {
     </AccordionItem>
   );
 };
+
+export const Accordions = ({items, color}) => {
+  return (
+
+      <Accordion defaultIndex={[0]} allowMultiple w={'90%'} ml={10} >
+        {items && items.map((i, index) => {
+          return (
+            <AccordianItems key={index} title={i.title} text={i.text} text1={i.text1} color={color}/>
+          )
+        })}
+      </Accordion>
+  )
+}
