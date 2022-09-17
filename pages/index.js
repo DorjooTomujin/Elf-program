@@ -154,16 +154,22 @@ export default function Home() {
         width={"full"}
         bgImage={"/assets/img/hello1.png"}
         bgSize="contain"
-        bgRepeat={'no-repeat'}
+        bgRepeat={"no-repeat"}
         px={[5, 5, 5, 5, 0, 0]}
-        bgPos={["left bottom ","left bottom ","bottom","bottom","bottom","bottom"]}
+        bgPos={[
+          "left bottom ",
+          "left bottom ",
+          "bottom",
+          "bottom",
+          "bottom",
+          "bottom",
+        ]}
       >
         <ColorTitle
           title={"The world is changing,"}
           color="blue.main"
           size={["20px", "6vw", "55px", "70px", "90px", "90px"]}
           align={"start"}
-          
         />
         <Box pl={["0", "0", "0", "70px", "90px", "90px"]}>
           <ColorTitle
@@ -171,12 +177,11 @@ export default function Home() {
             size={["20px", "6vw", "55px", "70px", "90px", "90px"]}
             color="blue.main"
             align={"start"}
-            
           />
         </Box>
-        <HStack justifyContent={"end"} py={10} w={"100%"}  >
+        <HStack justifyContent={"end"} py={10} w={"100%"}>
           <Box w={4} />
-          <VStack w={['100%','80%','40%','40%','40%','40%']}>
+          <VStack w={["100%", "80%", "40%", "40%", "40%", "40%"]}>
             <Text>
               We are facing completely different and more complex challenges
               than of the past, and this is not only today&#39;s problem. To
@@ -276,14 +281,14 @@ export default function Home() {
       </Grid>
       <Box h={10} />
       <HStack
-        px={[5,5,10,10,10,10]}
+        px={[5, 5, 10, 10, 10, 10]}
         mx="auto"
         py={20}
         bgImage={"/assets/img/pathImg.png"}
         bgPos="right"
         bgSize={"contain"}
-        w={'100%'}
-        bgRepeat='no-repeat'
+        w={"100%"}
+        bgRepeat="no-repeat"
       >
         <VStack alignItems={"start"} w={"100%"}>
           <ColorTitle
@@ -307,7 +312,11 @@ export default function Home() {
             size={[["30px", "40px", "55px", "70px", "90px", "90px"]]}
           />
           <Box h={10} />
-          <HStack gap={10} alignItems='start' display={['none', 'none', 'none', 'flex', 'flex', 'flex']}>
+          <HStack
+            gap={10}
+            alignItems="start"
+            display={["none", "none", "none", "flex", "flex", "flex"]}
+          >
             <DefaultText
               title={
                 "It's not about what you know, It's about what you can do with it."
@@ -327,24 +336,34 @@ export default function Home() {
           </HStack>
         </VStack>
       </HStack>
-          <HStack gap={10} px={[5,5,10,10,10,10]} pt={20} alignItems='start' flexDir={['column', 'column', 'row','','','']} display={['flex', 'flex', 'flex', 'none', 'none', 'none', ]}>
-            <DefaultText
-              title={
-                "It's not about what you know, It's about what you can do with it."
-              }
-              text={
-                "All of our classes are taught in Project based learning (PBL) method. Students are divided into teams and collaboratively work on solving real-life problems. While using the knowledge acquired from the resouces provided from the schools, students continue on making lasting impact to society while mastering the skills and habits that are of demand in the real-world."
-              }
-              tColor={"green.main"}
-            />
-            <DefaultText
-              title={"Community is a driving force of the quality of learning."}
-              text={
-                "We build our student body with driven students, and we want to create alumni that create, innovate, and improve wherever they are. For that we exercise an admissions process to find self-driven students regardless of their parents financial capabilities."
-              }
-              tColor={"green.main"}
-            />
-          </HStack>
+
+    
+      <HStack
+        gap={10}
+        px={[5, 5, 10, 10, 10, 10]}
+        pt={20}
+        alignItems="start"
+        flexDir={["column", "column", "row", "", "", ""]}
+        display={["flex", "flex", "flex", "none", "none", "none"]}
+      >
+        <DefaultText
+          title={
+            "It's not about what you know, It's about what you can do with it."
+          }
+          text={
+            "All of our classes are taught in Project based learning (PBL) method. Students are divided into teams and collaboratively work on solving real-life problems. While using the knowledge acquired from the resouces provided from the schools, students continue on making lasting impact to society while mastering the skills and habits that are of demand in the real-world."
+          }
+          tColor={"green.main"}
+        />
+        <DefaultText
+          title={"Community is a driving force of the quality of learning."}
+          text={
+            "We build our student body with driven students, and we want to create alumni that create, innovate, and improve wherever they are. For that we exercise an admissions process to find self-driven students regardless of their parents financial capabilities."
+          }
+          tColor={"green.main"}
+        />
+      </HStack>
+      
       {/* <Box
           w={"100%"}
           py={100}
@@ -425,6 +444,40 @@ export default function Home() {
           </Box>
         </HStack>
       </Box>
+      <VStack  mx='auto' px={[5,5,5,10,10,10]}  py={20} bg='blue.main'>
+            <Heading textTransform={'uppercase'} fontSize={["40px", "50px", "55px", "70px", "90px", "90px"]} color='white'>we touch every life.</Heading>
+            <Box h={10}/>
+            <Grid gridTemplateColumns={['repeat(1, 1fr)','repeat(1, 1fr)','repeat(2, 1fr)','repeat(4, 1fr)','repeat(4, 1fr)','repeat(4, 1fr)']} gap={10}>
+              <GridItem color={'white'}>
+                <Heading color={'white'} textTransform='capitalize' fontSize={24}>our schools can be 100% free</Heading>
+                <Box h={6}/>
+                <Text>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam praesentium voluptas illo dignissimos amet nisi ad cum nulla architecto atque error fugit ratione odio provident, nobis quibusdam culpa id ut?</Text>
+                <Box h={4}/>
+                <Text>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam praesentium voluptas illo dignissimos amet nisi ad cum nulla architecto atque error fugit ratione odio provident, nobis quibusdam culpa id ut?</Text>
+              </GridItem>
+              <GridItem color={'white'}>
+                <Heading color={'white'} textTransform='capitalize' fontSize={24}>scaling of our curriculum</Heading>
+                <Box h={6}/>
+                <Text>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam praesentium voluptas illo dignissimos amet nisi ad cum nulla architecto atque error fugit ratione odio provident, nobis quibusdam culpa id ut?</Text>
+                <Box h={4}/>
+                <Text>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam praesentium voluptas illo dignissimos amet nisi ad cum nulla architecto atque error fugit ratione odio provident, nobis quibusdam culpa id ut?</Text>
+              </GridItem>
+              <GridItem color={'white'}>
+                <Heading color={'white'} textTransform='capitalize' fontSize={24}>driving digital revolution</Heading>
+                <Box h={6}/>
+                <Text>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam praesentium voluptas illo dignissimos amet nisi ad cum nulla architecto atque error fugit ratione odio provident, nobis quibusdam culpa id ut?</Text>
+                <Box h={4}/>
+                <Text>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam praesentium voluptas illo dignissimos amet nisi ad cum nulla architecto atque error fugit ratione odio provident, nobis quibusdam culpa id ut?</Text>
+              </GridItem>
+              <GridItem color={'white'}>
+                <Heading color={'white'} textTransform='capitalize' fontSize={24}>edu-box at every home</Heading>
+                <Box h={6}/>
+                <Text>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam praesentium voluptas illo dignissimos amet nisi ad cum nulla architecto atque error fugit ratione odio provident, nobis quibusdam culpa id ut?</Text>
+                <Box h={4}/>
+                <Text>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam praesentium voluptas illo dignissimos amet nisi ad cum nulla architecto atque error fugit ratione odio provident, nobis quibusdam culpa id ut?</Text>
+              </GridItem>
+            </Grid>
+      </VStack>
       <VStack alignItems="start" py={10} px={[5, 5, 5, 5, 0]}>
         <MediaTitle title={"awards:"} />
         <Media items={awards} />
