@@ -30,14 +30,15 @@ import { useState } from "react";
 import i18next from "i18next";
 import { useEffect } from "react";
 import { Media } from "../src/components/media";
+import { DefaultText } from "../src/components/utils/text";
 
 const awards = [
   {
-    img: "bloomberg.png",
+    img: "bloombergAward2020.png",
     text: "Bloomber Mongolia | Awarded as The Child Friendly, Innovative School Architecture",
   },
   {
-    img: "bloomberg.png",
+    img: "bloombergAward2021.png",
     text: "Bloomber Mongolia | Awarded as The Top Educational Institution",
   },
   {
@@ -114,43 +115,88 @@ export default function Home() {
   const { isFounderOpen, onFounderOpen, onFounderClose } = useDisclosure();
 
   return (
-    i18next.t != undefined && (
-      <VStack overflowX={"hidden"}>
+    <VStack overflowX={"hidden"}>
+      <Box
+        px={0}
+        w={"100vw"}
+        overflow="hidden"
+        mb={10}
+        bg={"blue.main"}
+        display={"flex"}
+        alignItems="center"
+        justifyContent={"start"}
+        flexDir={[
+          "column-reverse",
+          "column-reverse",
+          "row",
+          "row",
+          "row",
+          "row",
+        ]}
+      >
         <Box
-          px={0}
-          w={"100vw"}
-          overflow="hidden"
-          mb={10}
-          bg={"blue.main"}
-          display={"flex"}
-          alignItems="center"
-          justifyContent={"start"}
-          flexDir={[
-            "column-reverse",
-            "column-reverse",
-            "row",
-            "row",
-            "row",
-            "row",
-          ]}
+          w={["90%", "90%", "40%", "40%", "40%", "40%"]}
+          pl={[0, 0, 8, 0, 0, 0]}
         >
-          <Box
-            w={["90%", "90%", "40%", "40%", "40%", "40%"]}
-            pl={[0, 0, 8, 0, 0, 0]}
-          >
-            <HomeTitle />
-          </Box>
-          <Box
-            w={["100%", "80vw", "60%", "60%", "60%", "60%"]}
-            mb={["-15vw", "-15vw", 0, 0, 0, 0]}
-          >
-            <Image src="/assets/img/Merit1.png" />
-          </Box>
+          <HomeTitle />
         </Box>
-        <MainTitle />
-        <Box h={10} />
-        <Heading>{i18next.t("key")}</Heading>
-        <Box maxW={"1200px"} py={10} w={"100%"} px={[5, 5, 5, 5, 3, 0]}>
+        <Box
+          w={["100%", "80vw", "60%", "60%", "60%", "60%"]}
+          mb={["-15vw", "-15vw", 0, 0, 0, 0]}
+        >
+          <Image src="/assets/img/Merit1.png" />
+        </Box>
+      </Box>
+      <VStack
+        maxW={"1200px"}
+        py={20}
+        alignItems="start"
+        width={"full"}
+        bgImage={"/assets/img/hello1.png"}
+        bgSize="contain"
+        bgRepeat={'no-repeat'}
+        px={[5, 5, 5, 5, 0, 0]}
+        bgPos={["left bottom ","left bottom ","bottom","bottom","bottom","bottom"]}
+      >
+        <ColorTitle
+          title={"The world is changing,"}
+          color="blue.main"
+          size={["20px", "6vw", "55px", "70px", "90px", "90px"]}
+          align={"start"}
+          
+        />
+        <Box pl={["0", "0", "0", "70px", "90px", "90px"]}>
+          <ColorTitle
+            title={"so should education."}
+            size={["20px", "6vw", "55px", "70px", "90px", "90px"]}
+            color="blue.main"
+            align={"start"}
+            
+          />
+        </Box>
+        <HStack justifyContent={"end"} py={10} w={"100%"}  >
+          <Box w={4} />
+          <VStack w={['100%','80%','40%','40%','40%','40%']}>
+            <Text>
+              We are facing completely different and more complex challenges
+              than of the past, and this is not only today&#39;s problem. To
+              thrive in this world of rapid change, school graduates need the
+              ability to become anything they want at any given time and
+              circumstances.
+            </Text>
+            <Box h={2} />
+            <Text>
+              Elf Curriculum is here to transform how students are taught and
+              introduce a new way of learning to everyone, everywhere. As our
+              name Elf stands for Empowering Lives Forever, we are committed to
+              make lasting impact on people&#39;s lives through education.
+            </Text>
+          </VStack>
+        </HStack>
+      </VStack>
+      <Box h={10} />
+
+      {/* <Box maxW={"1200px"} py={10} w={"100%"} px={[5, 5, 5, 5, 3, 0]}>
           <Text color={"blue.main"} textAlign="center">
             Lorem ipsum dolor sit amet.
           </Text>
@@ -179,60 +225,129 @@ export default function Home() {
               <ProgramCard />
             </GridItem>
           </Grid>
-        </Box>
-        <Grid
-          maxW={"1200px"}
-          gap={[4, 10, 4, 4, 6, 8]}
-          py={10}
-          px={[10, 10, 10, 10, 0, 0]}
-          flexDir={["column", "column", "row", "row", "row", "row"]}
-          w="100%"
-          gridTemplateColumns={[
-            "repeat(2, auto)",
-            "repeat(2, auto)",
-            "repeat(4, auto)",
-            "repeat(4, auto)",
-            "repeat(4, auto)",
-          ]}
-        >
-          <GridItem mx="auto">
-            <PartnerModal
-              isOpen={isOpen}
-              onOpen={onOpen}
-              onClose={onClose}
-              imgsrc={"elf-next-door"}
+        </Box> */}
+      <Grid
+        maxW={"1200px"}
+        gap={[4, 10, 4, 4, 6, 8]}
+        py={10}
+        px={[10, 10, 10, 10, 0, 0]}
+        flexDir={["column", "column", "row", "row", "row", "row"]}
+        w="100%"
+        gridTemplateColumns={[
+          "repeat(2, auto)",
+          "repeat(2, auto)",
+          "repeat(4, auto)",
+          "repeat(4, auto)",
+          "repeat(4, auto)",
+        ]}
+      >
+        <GridItem mx="auto">
+          <PartnerModal
+            isOpen={isOpen}
+            onOpen={onOpen}
+            onClose={onClose}
+            imgsrc={"elf-next-door"}
+          />
+        </GridItem>
+        <GridItem mx="auto">
+          <PartnerModal
+            isOpen={isOpen}
+            onOpen={onOpen}
+            onClose={onClose}
+            imgsrc={"eco-kindergarden"}
+          />
+        </GridItem>
+        <GridItem mx="auto">
+          <PartnerModal
+            isOpen={isOpen}
+            onOpen={onOpen}
+            onClose={onClose}
+            imgsrc={"human-school"}
+          />
+        </GridItem>
+        <GridItem mx="auto">
+          <PartnerModal
+            isOpen={isOpen}
+            onOpen={onOpen}
+            onClose={onClose}
+            imgsrc="tas"
+          />
+        </GridItem>
+      </Grid>
+      <Box h={10} />
+      <HStack
+        px={[5,5,10,10,10,10]}
+        mx="auto"
+        py={20}
+        bgImage={"/assets/img/pathImg.png"}
+        bgPos="right"
+        bgSize={"contain"}
+        w={'100%'}
+        bgRepeat='no-repeat'
+      >
+        <VStack alignItems={"start"} w={"100%"}>
+          <ColorTitle
+            title={"reinventing"}
+            color="blue.main"
+            size={["30px", "40px", "55px", "70px", "90px", "90px"]}
+          />
+          <ColorTitle
+            title={"the student's"}
+            color="blue.main"
+            size={[["30px", "40px", "55px", "70px", "90px", "90px"]]}
+          />
+          <ColorTitle
+            title={"learning"}
+            color="blue.main"
+            size={[["30px", "40px", "55px", "70px", "90px", "90px"]]}
+          />
+          <ColorTitle
+            title={"path"}
+            color="blue.main"
+            size={[["30px", "40px", "55px", "70px", "90px", "90px"]]}
+          />
+          <Box h={10} />
+          <HStack gap={10} alignItems='start' display={['none', 'none', 'none', 'flex', 'flex', 'flex']}>
+            <DefaultText
+              title={
+                "It's not about what you know, It's about what you can do with it."
+              }
+              text={
+                "All of our classes are taught in Project based learning (PBL) method. Students are divided into teams and collaboratively work on solving real-life problems. While using the knowledge acquired from the resouces provided from the schools, students continue on making lasting impact to society while mastering the skills and habits that are of demand in the real-world."
+              }
+              tColor={"green.main"}
             />
-          </GridItem>
-          <GridItem mx="auto">
-            <PartnerModal
-              isOpen={isOpen}
-              onOpen={onOpen}
-              onClose={onClose}
-              imgsrc={"eco-kindergarden"}
+            <DefaultText
+              title={"Community is a driving force of the quality of learning."}
+              text={
+                "We build our student body with driven students, and we want to create alumni that create, innovate, and improve wherever they are. For that we exercise an admissions process to find self-driven students regardless of their parents financial capabilities."
+              }
+              tColor={"green.main"}
             />
-          </GridItem>
-          <GridItem mx="auto">
-            <PartnerModal
-              isOpen={isOpen}
-              onOpen={onOpen}
-              onClose={onClose}
-              imgsrc={"human-school"}
+          </HStack>
+        </VStack>
+      </HStack>
+          <HStack gap={10} px={[5,5,10,10,10,10]} pt={20} alignItems='start' flexDir={['column', 'column', 'row','','','']} display={['flex', 'flex', 'flex', 'none', 'none', 'none', ]}>
+            <DefaultText
+              title={
+                "It's not about what you know, It's about what you can do with it."
+              }
+              text={
+                "All of our classes are taught in Project based learning (PBL) method. Students are divided into teams and collaboratively work on solving real-life problems. While using the knowledge acquired from the resouces provided from the schools, students continue on making lasting impact to society while mastering the skills and habits that are of demand in the real-world."
+              }
+              tColor={"green.main"}
             />
-          </GridItem>
-          <GridItem mx="auto">
-            <PartnerModal
-              isOpen={isOpen}
-              onOpen={onOpen}
-              onClose={onClose}
-              imgsrc="tas"
+            <DefaultText
+              title={"Community is a driving force of the quality of learning."}
+              text={
+                "We build our student body with driven students, and we want to create alumni that create, innovate, and improve wherever they are. For that we exercise an admissions process to find self-driven students regardless of their parents financial capabilities."
+              }
+              tColor={"green.main"}
             />
-          </GridItem>
-        </Grid>
-        <Box h={10} />
-        <Box
+          </HStack>
+      {/* <Box
           w={"100%"}
           py={100}
-          bg={"blue.main"}
           justifyContent={"center"}
           alignItems="center"
           display="flex"
@@ -255,8 +370,8 @@ export default function Home() {
               </Box>
             </HStack>
           </VStack>
-        </Box>
-        <HStack
+        </Box> */}
+      {/* <HStack
           maxW={"1200px"}
           py={100}
           w="full"
@@ -279,56 +394,56 @@ export default function Home() {
           <Box flex={1}>
             <PowerAccordian />
           </Box>
+        </HStack> */}
+      <Box w="full" my={10}>
+        <HStack
+          maxW={"1200px"}
+          py={100}
+          gap={10}
+          w="100%"
+          mx="auto"
+          alignItems={"start"}
+          flexDir={[
+            "column-reverse",
+            "column-reverse",
+            "row",
+            "row",
+            "row",
+            "row",
+          ]}
+        >
+          <Box flex={1}>
+            <Accordions items={guide} />
+          </Box>
+          <Box flex={1}>
+            <ColorTitle title="no more" color={"green.main"} />
+            <ColorTitle title="unengaged" color={"green.main"} />
+            <ColorTitle title="lectures" color={"green.main"} />
+            <ColorTitle title="it&#39;s time" color={"blue.main"} />
+            <ColorTitle title="for real" color={"blue.main"} />
+            <ColorTitle title="action." color={"blue.main"} />
+          </Box>
         </HStack>
-        <Box w="full" bg="blue.main" my={10}>
-          <HStack
-            maxW={"1200px"}
-            py={100}
-            gap={10}
-            w="100%"
-            mx='auto'
-            alignItems={"start"}
-            flexDir={[
-              "column-reverse",
-              "column-reverse",
-              "row",
-              "row",
-              "row",
-              "row",
-            ]}
-          >
-            <Box flex={1}>
-              <Accordions items={guide} color='white' />
-            </Box>
-            <Box flex={1}>
-              <ColorTitle title="no more" color={"green.main"} />
-              <ColorTitle title="unengaged" color={"green.main"} />
-              <ColorTitle title="lectures" color={"green.main"} />
-              <ColorTitle title="it&#39;s time" color={"white"} />
-              <ColorTitle title="for real" color={"white"} />
-              <ColorTitle title="action." color={"white"} />
-            </Box>
-          </HStack>
-        </Box>
-        <VStack alignItems="start" py={10}>
-          <MediaTitle title={"awards:"} />
-          <Media items={awards} />
-        </VStack>
-        <VStack alignItems="start" py={10}>
-          <MediaTitle title={"partners:"} />
-          <Media items={partners} />
-        </VStack>
-        <VStack alignItems="start" py={10}>
-          <MediaTitle title={"in media:"} />
-          <Media items={inMedia} />
-        </VStack>
-        <VStack alignItems="start" py={10}>
-          <MediaTitle title={"endorsed by:"} />
-          <Media items={endorsedBy} />
-        </VStack>
+      </Box>
+      <VStack alignItems="start" py={10} px={[5, 5, 5, 5, 0]}>
+        <MediaTitle title={"awards:"} />
+        <Media items={awards} />
+      </VStack>
+      <VStack alignItems="start" py={10} w="full" px={[5, 5, 5, 5, 0]}>
+        <MediaTitle title={"partners:"} />
+        <Media items={partners} />
+      </VStack>
+      <VStack alignItems="start" py={10} w="full" px={[5, 5, 5, 5, 0]}>
+        <MediaTitle title={"in media:"} />
+        <Media items={inMedia} />
+      </VStack>
+      <VStack alignItems="start" py={10} w="full" px={[5, 5, 5, 5, 0]}>
+        <MediaTitle title={"endorsed by:"} />
+        <Media items={endorsedBy} />
+      </VStack>
 
-        <Box>
-          <MediaTitle title={'Founders'}/>
+      <Box px={[5, 5, 5, 5, 0]}>
+        <MediaTitle title={"Founders"} />
         <Grid
           px={[5, 5, 5, 3, 0, 0]}
           maxW={"1200px"}
@@ -336,52 +451,46 @@ export default function Home() {
           gap={10}
           mx="auto"
           gridTemplateColumns={[
-            "repeat(2, auto)",
-            "repeat(6, auto)",
-            "repeat(6, auto)",
-            "repeat(5, auto)",
-            "repeat(5, auto)",
+            "repeat(1, 1fr)",
+            "repeat(1, 1fr)",
+            "repeat(2, 1fr)",
+            "repeat(4, 1fr)",
+            "repeat(4, 1fr)",
           ]}
           alignItems="end"
           justifyContent={"center"}
         >
-          <GridItem
-            h={"100%"}
-            gridColumnStart={[1]}
-            gridColumnEnd={[3, 4, 3, 2, 2]}
-          >
+          <GridItem h={"100%"}>
             <FoundersModal
               isOpen={isFounderOpen}
               onClose={onFounderClose}
               onOpen={onFounderOpen}
               imgsrc="batjin.jpg"
+              title={"Batjin Boldbat"}
+              text={"Co-Founder & Board Member "}
             />
           </GridItem>
-          <GridItem
-            h={"100%"}
-            gridColumnStart={[3, 4, 3, 2, 2]}
-            gridColumnEnd={[5, 7, 5, 3, 3, 3]}
-          >
-            <FoundersModal
-              isOpen={isFounderOpen}
-              onClose={onFounderClose}
-              onOpen={onFounderOpen}
-              imgsrc="founder1.png"
-            />
-          </GridItem>
-          <GridItem
-            h={"100%"}
-            gridColumnStart={[5, 2, 5, 3, 3]}
-            gridColumnEnd={[7, 6, 7, 4, 4]}
-          >
+          <GridItem h={"100%"}>
             <FoundersModal
               isOpen={isFounderOpen}
               onClose={onFounderClose}
               onOpen={onFounderOpen}
               imgsrc="founder2.jpg"
+              title={"Nyamaa Buyantogtokh "}
+              text={"Co-Founder & Chairman of The Board"}
             />
           </GridItem>
-          <GridItem
+          <GridItem h={"100%"}>
+            <FoundersModal
+              isOpen={isFounderOpen}
+              onClose={onFounderClose}
+              onOpen={onFounderOpen}
+              imgsrc="founder1.png"
+              title={" Solongo Batsuuri"}
+              text={"Co-Founder & Board Member "}
+            />
+          </GridItem>
+          {/* <GridItem
             h={"100%"}
             gridColumnStart={[2, 1, 2, 4, 4]}
             gridColumnEnd={[4, 4, 4, 5, 5]}
@@ -392,24 +501,19 @@ export default function Home() {
               onOpen={onFounderOpen}
               imgsrc="founder3.png"
             />
-          </GridItem>
-          <GridItem
-            h={"100%"}
-            alignItems="end"
-            mx="auto"
-            gridColumnStart={[4, 4, 4, 5, 5]}
-            gridColumnEnd={[6, 7, 6, 6, 6]}
-          >
+          </GridItem> */}
+          <GridItem h={"100%"} alignItems="end" mx="auto">
             <FoundersModal
               isOpen={isFounderOpen}
               onClose={onFounderClose}
               onOpen={onFounderOpen}
               imgsrc="anar-od.jpg"
+              title={"Anar-Od Odgerel"}
+              text={"Co-Founder & Board Member"}
             />
           </GridItem>
         </Grid>
-        </Box>
-      </VStack>
-    )
+      </Box>
+    </VStack>
   );
 }

@@ -92,7 +92,7 @@ export const PartnerModal = ({ onOpen, isOpen, onClose, imgsrc }) => {
     </Box>
   );
 };
-export const FoundersModal = ({ onOpen, isOpen, onClose, imgsrc }) => {
+export const FoundersModal = ({ onOpen, isOpen, onClose, imgsrc, text, title }) => {
   return (
     <Box px={0} h={"100%"}>
       <Box
@@ -101,17 +101,20 @@ export const FoundersModal = ({ onOpen, isOpen, onClose, imgsrc }) => {
         h={"100%"}
         _hover={{
           button: { transform: "scale(1.1)" },
-          div: { opacity: "0.1", transition: 0.3 },
+          article: { opacity: "0.1", transition: 0.3 , transform: 'scale(1)'},
           span: {transform: 'translateY(0)', transition: 0.3}
         }}
       >
+        
         <Box
+        as="article"
           pos={"absolute"}
           inset={0}
           bg={"blue.main"}
           zIndex={100}
           opacity="0"
-          transition={0.3}
+          transform={'scale(0.1)'}
+          transition={'0.3s'}
         />
         <Button
           variant={"unstyled"}
@@ -119,14 +122,15 @@ export const FoundersModal = ({ onOpen, isOpen, onClose, imgsrc }) => {
           onClick={onOpen}
           alignItems="end"
           display={"flex"}
+          w='full'
         >
-          <Box>
-            <Image src={`/assets/img/${imgsrc}`} />
+          <Box w='100%'>
+            <Image src={`/assets/img/${imgsrc}`} objectFit='cover' w='full'/>
           </Box>
         </Button>
         <Box w={'100%'} pos='absolute' as={'span'} transform={'translateY(100%)'}  bottom={0} transition='0.3s' bg={'blue.main'} py={2} px={4} color={'white'}>
-          <Heading fontSize={'24px'}>Batjin</Heading>
-          <Text>ceo</Text>
+          <Heading fontSize={'24px'}>{title}</Heading>
+          <Text>{text}</Text>
         </Box>
       </Box>
       {/* <Heading fontSize={'2xl'}>{imgsrc}</Heading> */}
