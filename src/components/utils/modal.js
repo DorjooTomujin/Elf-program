@@ -125,7 +125,7 @@ export const FoundersModal = ({ onOpen, isOpen, onClose, imgsrc, text, title }) 
           w='full'
         >
           <Box w='100%'>
-            <Image src={`/assets/img/${imgsrc}`} objectFit='cover' w='full'/>
+            <Image src={`/assets/img/${imgsrc}`} objectFit='contain' w='full'/>
           </Box>
         </Button>
         <Box w={'100%'} pos='absolute' as={'span'} transform={'translateY(100%)'}  bottom={0} transition='0.3s' bg={'blue.main'} py={2} px={4} color={'white'}>

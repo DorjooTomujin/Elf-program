@@ -458,7 +458,7 @@ export default function Home() {
                 <Text>We work with students based on their inner drive. If a student gets accepted to our school buy can&#39;t afford our tuition, we do whatever it takes to give them financial aid. In the past 7 years of our history, we have given <b>52 billion tugrik</b> of financial aid of students. From 1st grade to already graduated gap year students, almost 100% of our students were able to recieve quality education BECAUSE of our financial aid policy.</Text>
               </GridItem>
               <GridItem color={'white'}>
-                <Heading color={'white'} textTransform='capitalize' fontSize={24}>scaling of our curriculum</Heading>
+                <Heading color={'white'} textTransform='capitalize' fontSize={24}>scaling our curriculum</Heading>
                 <Box h={6}/>
                 <Text>We are expanding our impact and enabling other schools (especially public schools) to join our movement. For this mission, we are licensing our curriculum with scale supported by.</Text>
                 <Text>- A teacher training program provided to public schools</Text>
@@ -569,7 +569,7 @@ export default function Home() {
               isOpen={isFounderOpen}
               onClose={onFounderClose}
               onOpen={onFounderOpen}
-              imgsrc="anar-od.jpg"
+              imgsrc="anar-od.png"
               title={"Anar-Od Odgerel"}
               text={"Co-Founder & Board Member"}
             />
