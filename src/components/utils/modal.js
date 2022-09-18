@@ -35,7 +35,7 @@ export const PartnerModal = ({ onOpen, isOpen, onClose, imgsrc }) => {
         <Image src={`/assets/img/${imgsrc}.png`} h={"100%"} />
       </Button>
 
-      <Modal isOpen={isOpen} onClose={onClose} size="xl">
+      <Modal  size="xl">
         <ModalOverlay />
         <ModalContent>
           <ModalHeader

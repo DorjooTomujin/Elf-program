@@ -88,26 +88,27 @@ const guide = [
   },
   {
     title: "Solution Design & Research",
-    text: "Students are given real-wolrd problems that are worth driving creative ideas. At the end of the inquiry process, solution groups are created for further development.",
+    text: "Students start developing their ideas in their solution group. Research is heavily incorporated into shaping their idea to become an implementable solution.",
 
     text1:
-      "Students are given real-wolrd problems that are worth driving creative ideas. At the end of the inquiry process, solution groups are created for further development.",
+      "To better grasp the context, students are given helpfil resources containing the required academic knowledge. The resources come in various forms such as video lessons, case studies, and articles prepared by the school. While students are encouraged to learn from the resources provided at home, they are expected to work in their solution group, consult with their ciaches, and master the skills and knowledge at school.",
   },
   {
     title: "Create",
-    text: "Students are given real-wolrd problems that are worth driving creative ideas. At the end of the inquiry process, solution groups are created for further development.",
+    text: "Students are challenged to create a prototype and test their solution to outsiders. The creation spins in cycles of iteration to make the final product. Throughout this process, feedback and critique comes systematically from their peers, coaches, as well as their parents.",
   },
   {
     title: "Showcase",
-    text: "Students are given real-wolrd problems that are worth driving creative ideas. At the end of the inquiry process, solution groups are created for further development.",
+    text: "The final product is presented and showcased to stakeholders as well as to the public.",
   },
   {
     title: "Feedback & Critique",
-    text: "Students are given real-wolrd problems that are worth driving creative ideas. At the end of the inquiry process, solution groups are created for further development.",
+    text: "Feedback & Critique is given from stakeholders throughout the entire process.",
+    text1: "Stakeholders Peers, couches, and parents."
   },
   {
     title: "Make Impact Last",
-    text: "Students are given real-wolrd problems that are worth driving creative ideas. At the end of the inquiry process, solution groups are created for further development.",
+    text: "The final products stay as a sustainable solution and continue to serve the society.",
   },
 ];
 export default function Home() {
@@ -235,7 +236,7 @@ export default function Home() {
         maxW={"1200px"}
         gap={[4, 10, 4, 4, 6, 8]}
         py={10}
-        px={[10, 10, 10, 10, 0, 0]}
+        px={[4, 4, 10, 10, 0, 0]}
         flexDir={["column", "column", "row", "row", "row", "row"]}
         w="100%"
         gridTemplateColumns={[
@@ -315,6 +316,7 @@ export default function Home() {
           <HStack
             gap={10}
             alignItems="start"
+            w={'60%'}
             display={["none", "none", "none", "flex", "flex", "flex"]}
           >
             <DefaultText
@@ -451,30 +453,37 @@ export default function Home() {
               <GridItem color={'white'}>
                 <Heading color={'white'} textTransform='capitalize' fontSize={24}>our schools can be 100% free</Heading>
                 <Box h={6}/>
-                <Text>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam praesentium voluptas illo dignissimos amet nisi ad cum nulla architecto atque error fugit ratione odio provident, nobis quibusdam culpa id ut?</Text>
+                <Text>Most schools in the world, and almost all schools in Mongolia enroll students solely based on their financial status. We believe that education must be accessible regardless of their financial situation. Most importantly, education must be accessible to those who really want it.</Text>
                 <Box h={4}/>
-                <Text>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam praesentium voluptas illo dignissimos amet nisi ad cum nulla architecto atque error fugit ratione odio provident, nobis quibusdam culpa id ut?</Text>
+                <Text>We work with students based on their inner drive. If a student gets accepted to our school buy can&#39;t afford our tuition, we do whatever it takes to give them financial aid. In the past 7 years of our history, we have given <b>52 billion tugrik</b> of financial aid of students. From 1st grade to already graduated gap year students, almost 100% of our students were able to recieve quality education BECAUSE of our financial aid policy.</Text>
               </GridItem>
               <GridItem color={'white'}>
                 <Heading color={'white'} textTransform='capitalize' fontSize={24}>scaling of our curriculum</Heading>
                 <Box h={6}/>
-                <Text>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam praesentium voluptas illo dignissimos amet nisi ad cum nulla architecto atque error fugit ratione odio provident, nobis quibusdam culpa id ut?</Text>
+                <Text>We are expanding our impact and enabling other schools (especially public schools) to join our movement. For this mission, we are licensing our curriculum with scale supported by.</Text>
+                <Text>- A teacher training program provided to public schools</Text>
+                <Text>- R&D into the most efficient forms of teaching and learning and experience sharing with public schools.</Text>
+                <Text>- A digital learning platform to reach kids from all over the world</Text>
+                <Text>- Partnerships on long-term projects with overarching schools</Text>
+                <Text>- Certification and standardizations</Text>
                 <Box h={4}/>
-                <Text>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam praesentium voluptas illo dignissimos amet nisi ad cum nulla architecto atque error fugit ratione odio provident, nobis quibusdam culpa id ut?</Text>
+                <Text>So far, we have successfully licensed our early education programmes to <b>10 public kindergartens,</b> K12 education curriculum to <b>2 public schools</b> in Mongolia at affordable rates.</Text>
               </GridItem>
               <GridItem color={'white'}>
                 <Heading color={'white'} textTransform='capitalize' fontSize={24}>driving digital revolution</Heading>
                 <Box h={6}/>
-                <Text>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam praesentium voluptas illo dignissimos amet nisi ad cum nulla architecto atque error fugit ratione odio provident, nobis quibusdam culpa id ut?</Text>
+                <Text>We have an in-house technology startup with the mission to revolutionize how people are taught and make education accessible to all. Using technology to collect and leverage data, the compony is in the forefront of empowering teachers and students alike to allow each student to reach theri maximum potential.</Text>
                 <Box h={4}/>
-                <Text>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam praesentium voluptas illo dignissimos amet nisi ad cum nulla architecto atque error fugit ratione odio provident, nobis quibusdam culpa id ut?</Text>
+                <Text>As our pilot projects, we have built an educational hyper-casual P2E mobile game that contains dissected bits of guant curriculums. Through this mobile game, we are planning to reach millions of students from all over the world. Making education fun and accessible at the same time.</Text>
               </GridItem>
               <GridItem color={'white'}>
                 <Heading color={'white'} textTransform='capitalize' fontSize={24}>edu-box at every home</Heading>
                 <Box h={6}/>
-                <Text>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam praesentium voluptas illo dignissimos amet nisi ad cum nulla architecto atque error fugit ratione odio provident, nobis quibusdam culpa id ut?</Text>
-                <Box h={4}/>
-                <Text>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam praesentium voluptas illo dignissimos amet nisi ad cum nulla architecto atque error fugit ratione odio provident, nobis quibusdam culpa id ut?</Text>
+                <Text>The COVID 19 pandemic brought immense damage to education sectors from all around the world. During the pandemic, we started an Anti-COVID movement, to help the most endangered group - early childhood to receive quality education through Project Based Learning kits. Our kits offered viable solutions to traditional schooling:</Text>
+                <Text>- Engaging, toy-like products</Text>
+                <Text>- Online classes</Text>
+                <Text>- Easy-to-follow instructions</Text>
+                <Text>- Community of like-minded learners</Text>
               </GridItem>
             </Grid>
       </VStack>
