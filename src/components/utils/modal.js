@@ -129,7 +129,7 @@ export const FoundersModal = ({ onOpen, isOpen, onClose, imgsrc, text, title }) 
           </Box>
         </Button>
         <Box w={'100%'} pos='absolute' as={'span'} transform={'translateY(100%)'}  bottom={0} transition='0.3s' bg={'blue.main'} py={2} px={4} color={'white'}>
-          <Heading fontSize={'24px'}>{title}</Heading>
+          <Heading fontSize={['14px','20px','24px','24px','24px','24px']}>{title}</Heading>
           <Text>{text}</Text>
         </Box>
       </Box>

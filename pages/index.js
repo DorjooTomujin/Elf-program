@@ -232,6 +232,7 @@ export default function Home() {
             </GridItem>
           </Grid>
         </Box> */}
+        <Box maxW={"1200px"} px={[4, 4, 10, 10, 0, 0]} pt={10}><MediaTitle title={"OUR SCHOOLS:"} /></Box>
       <Grid
         maxW={"1200px"}
         gap={[4, 10, 4, 4, 6, 8]}
@@ -507,15 +508,15 @@ export default function Home() {
       <Box px={[5, 5, 5, 5, 0]}>
         <MediaTitle title={"Founders"} />
         <Grid
-          px={[5, 5, 5, 3, 0, 0]}
+
           maxW={"1200px"}
           py={10}
-          gap={10}
+          gap={[4,10,10,10,10,10]}
           mx="auto"
           gridTemplateColumns={[
-            "repeat(1, 1fr)",
-            "repeat(1, 1fr)",
             "repeat(2, 1fr)",
+            "repeat(2, 1fr)",
+            "repeat(4, 1fr)",
             "repeat(4, 1fr)",
             "repeat(4, 1fr)",
           ]}

@@ -5,7 +5,7 @@ import {ImArrowRight} from 'react-icons/im'
 
 export default function Footer() {
     return (
-        <HStack bg={'blue.main'} pos='relative' h={'40vh'} mt={10}>
+        <HStack bg={'blue.main'} pos='relative' h={['30vh','30vh','40vh','40vh','40vh']} mt={10} flexDir={['column', 'column', 'row', 'row', 'row']}>
             <Box bgImage='/assets/img/footerBg.svg' objectFit={'cover'} bgPos='center' bg bgRepeat='repeat' opacity={0.1} pos={'absolute'} display='inline-block' h='full' w='full' zIndex={1}/>
             <VStack flex={1} pos='relative' zIndex={2} px={10} h='full'>
                 <HStack pos={'relative'} h={'80%'} pt={'10%'}>
@@ -27,7 +27,7 @@ export default function Footer() {
                     <Link color={'white'} href={'tel:+97672222777'} target={'_blank'}>(976) 72222777</Link>
                 </HStack>
             </VStack>
-            <VStack flex={1}>
+            <VStack flex={[0,0,0,1,1,1]}>
 
             </VStack>
         </HStack>
