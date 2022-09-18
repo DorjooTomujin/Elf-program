@@ -34,11 +34,11 @@ import { DefaultText } from "../src/components/utils/text";
 
 const awards = [
   {
-    img: "bloombergAward2020.png",
+    img: "bAward2020.png",
     text: "Bloomber Mongolia | Awarded as The Child Friendly, Innovative School Architecture",
   },
   {
-    img: "bloombergAward2021.png",
+    img: "bAward2021.png",
     text: "Bloomber Mongolia | Awarded as The Top Educational Institution",
   },
   {
