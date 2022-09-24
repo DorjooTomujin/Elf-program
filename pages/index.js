@@ -492,10 +492,10 @@ export default function Home() {
         <MediaTitle title={"awards:"} />
         <Media items={awards} />
       </VStack>
-      <VStack alignItems="start" py={10} w="full" maxW={'1200px'} px={[5, 5, 5, 5, 0]}>
+      {/* <VStack alignItems="start" py={10} w="full" maxW={'1200px'} px={[5, 5, 5, 5, 0]}>
         <MediaTitle title={"partners:"} />
         <Media items={partners} />
-      </VStack>
+      </VStack> */}
       <VStack alignItems="start" py={10} w="full" maxW={'1200px'} px={[5, 5, 5, 5, 0]}>
         <MediaTitle title={"in media:"} />
         <Media items={inMedia} />
