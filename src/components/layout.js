@@ -8,7 +8,7 @@ export default function Layout({ children }) {
       {/* <Navbar /> */}
       <Head>
         <title>Elf Curriculum </title>
-        <link rel="shortcut icon" type="image/x-icon" href="/assets/img/elf-curriculum-logo.png" sizes="80x30"/>
+        <link rel="shortcut icon" type="image/x-icon" href="/assets/img/Favicon.png" sizes="80x30"/>
       </Head>
       <main>{children}</main>
       <Footer />
